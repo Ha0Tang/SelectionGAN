@@ -1,4 +1,4 @@
-@inproceedings{park2019SPADE,
+@inproceedings{tang2019multichannel,
   title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation},
   author={Tang, Hao and Xu, Dan and Wang, Yanzhi and Sebe, Nicu and Corso, Jason J. and Yan, Yan},
   booktitle={CVPR},
