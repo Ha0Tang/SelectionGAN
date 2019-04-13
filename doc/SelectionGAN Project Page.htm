@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0031)https://github.com/Ha0Tang/SelectionGAN -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" class="gr__nvlabs_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Selection Project Page</title>
+
+
+<meta property="og:image" content="images/teaser_fb.jpg">
+<meta property="og:title" content="Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation">
+
+<script type="text/javascript" async="" src="./Selection Project Page_files/analytics.js"></script><script src="./SelectionGAN Project Page_files/lib.js" type="text/javascript"></script>
+<script src="./Selection Project Page_files/popup.js" type="text/javascript"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./SelectionGAN Project Page_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136330885-1');
+</script>
+
+<script type="text/javascript">
+// redefining default features
+var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
+</script>
+<link media="all" href="./SelectionGAN Project Page_files/glab.css" type="text/css" rel="StyleSheet">
+<style type="text/css" media="all">
+IMG {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FLOAT: right;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px
+}
+#primarycontent {
+	MARGIN-LEFT: auto; ; WIDTH: expression(document.body.clientWidth >
+1000? "1000px": "auto" ); MARGIN-RIGHT: auto; TEXT-ALIGN: left; max-width:
+1000px }
+BODY {
+	TEXT-ALIGN: center
+}
+</style>
+
+<meta content="MSHTML 6.00.2800.1400" name="GENERATOR"><script src="./SelectionGAN Project Page_files/b5m.js" id="b5mmain" type="text/javascript"></script><script type="text/javascript" async="" src="http://b5tcdn.bang5mai.com/js/flag.js?v=155518528"></script></head>
+
+<body data-gr-c-s-loaded="true">
+
+<div id="primarycontent">
+<center><h1>Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation</h1></center>
+<center><h2>
+	<a href="http://disi.unitn.it/~hao.tang/" target="_blank">Hao Tang<sup>1,2</sup>*</a>&nbsp;&nbsp;&nbsp;
+	<a href="http://www.robots.ox.ac.uk/~danxu/" target="_blank">Dan Xu<sup>3</sup>*</a>&nbsp;&nbsp;&nbsp;
+	<a href="http://disi.unitn.it/~sebe/" target="_blank">Nicu Sebe<sup>1,4</sup></a>&nbsp;&nbsp;&nbsp;
+	</h2>
+	<h2>
+	<a href="https://ywang393.expressions.syr.edu/" target="_blank">Yanzhi Wang<sup>5</sup></a>&nbsp;&nbsp;&nbsp;
+	<a href="http://web.eecs.umich.edu/~jjcorso/" target="_blank">Jason J. Corso<sup>6</sup></a>&nbsp;&nbsp;&nbsp;
+	<a href="https://userweb.cs.txstate.edu/~y_y34/" target="_blank">Yan Yan<sup>2</sup></a>&nbsp;&nbsp;&nbsp;
+	</h2>
+	<center><h2>
+		<a href="https://www.disi.unitn.it/" target="_blank"><sup>1</sup>University of Trento</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://www.txstate.edu/" target="_blank"><sup>2</sup>Texas State University</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://www.ox.ac.uk/" target="_blank"><sup>3</sup>University of Oxford</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://www.huawei.com/en/" target="_blank"><sup>4</sup>Huawei</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://www.northeastern.edu/" target="_blank"><sup>5</sup>Northeastern University</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://umich.edu/" target="_blank"><sup>6</sup>University of Michigan</a>&nbsp;&nbsp;&nbsp;
+	</h2></center>
+<center><h2>in CVPR 2019 (Oral)</h2></center>
+<center><h2><strong><a href="https://arxiv.org/abs/1903.072" target="_blank">Paper</a> | <a href="https://github.com/Ha0Tang/SelectionGAN_PyTorch" target="_blank" target="_blank">Code (Coming Soon)</a> </strong> </h2></center>
+<center><a href="./SelectionGAN Project Page_files/framework.jpg">
+<img src="./SelectionGAN Project Page_files/framework.jpg" width="100%"> </a></center>
+<p align="justify"> Overview of the proposed SelectionGAN. Stage I presents a cycled semantic-guided generation sub-network which accepts images from one view and conditional semantic maps and simultaneously synthesizes images and semantic maps in another view. Stage II takes the coarse predictions and the learned deep semantic features from stage I, and performs a fine-grained generation using the proposed multi-channel attention selection module.
+</p>
+
+<p></p>
+<p>
+
+</p>
+<h2 align="center">Abstract</h2>
+
+<div style="font-size:14px"><p align="justify">Cross-view image translation is challenging because it involves  images with drastically different views and severe deformation.
+In this paper, we propose a novel approach named Multi-Channel Attention SelectionGAN (SelectionGAN) that makes it possible to generate images of natural scenes in arbitrary viewpoints, based on an image of the scene and a novel semantic map. The proposed SelectionGAN explicitly utilizes the semantic information and consists of two stages. In the first stage, the condition image and the target semantic map are fed into a cycled semantic-guided generation network to produce initial coarse results. In the second stage, we refine the initial results by using a multi-channel attention selection mechanism. Moreover, uncertainty maps automatically learned from attentions are used to guide the pixel loss for better network optimization. Extensive experiments on Dayton, CVUSA and Ego2Top datasets show that our model is able to generate significantly better results than the state-of-the-art methods.</p></div>
+
+
+<a href="https://arxiv.org/abs/1903.072" target="_blank"><img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="./SelectionGAN Project Page_files/paper_thumbnail.jpg" width="150"></a>
+
+
+
+<h2>Paper</h2>
+<p><a href="https://arxiv.org/abs/1903.07291" target="_blank">arxiv</a>,  2019. </p>
+
+
+
+<h2>Citation</h2>
+<p>Hao Tang, Dan Xu, Nicu Sebe, Yanzhi Wang, Jason J. Corso and Yan Yan.<br>"Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation", in CVPR, 2019.
+<a href="https://github.com/Ha0Tang/SelectionGAN_PyTorch/tree/master/doc/SelectionGAN.txt" target="_blank">Bibtex</a>
+</p>
+
+<p></p>
+
+<h1 align="center">  Multi-Channel Attention Selection Module </h1>
+<center><img src="./SelectionGAN Project Page_files/method.jpg" width="100%"></center>
+<br>
+<p align="justify"> The multi-scale spatial pooling pools features in different receptive fields in order to have better generation of scene details; the multi-channel attention selection aims at automatically select from a set of intermediate diverse generations in a larger generation space to improve the generation quality.
+</p>
+
+
+<br>
+<h1 align="center"> Coarse-to-Fine Generation </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_dayton_a2g.jpg" width="1000"></center>
+<p align="justify">
+Results generated by our SelectionGAN in 256×256 resolution in a2g direction on <a href="https://github.com/lugiavn/gt-crossview" target="_blank"><span style="font-weight:normal">Dayton dataset</span></a>. These sampleswere randomly selected for visualization purposes. 
+</p>
+<br>
+
+<br>
+<h1 align="center"> Visualization of Uncertainty Map </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_cvusa.jpg" width="1000"></center>
+<p align="justify"> 
+Results generated by our SelectionGAN in 256×256 resolution in a2g direction on <a href="http://cs.uky.edu/~jacobs/datasets/cvusa/" target="_blank"><span style="font-weight:normal">CVUSA dataset</span></a>. These sampleswere randomly selected for visualization purposes.
+</p>
+<br>
+
+<br>
+<h1 align="center"> Arbitrary Cross-View Image Translation </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_ego2top_results.jpg" width="1000"></center>
+<p align="justify"> 
+Arbitrary cross-view image translation on <a href="https://arxiv.org/abs/1607.06986" target="_blank"><span style="font-weight:normal">Ego2Top dataset</span></a>.
+</p>
+<br>
+
+<br>
+<h1 align="center"> State-of-the-art Comparisons on Ego2Top Dataset </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_ego2top_comp.jpg" width="1000"></center>
+<p align="justify"> 
+Results generated by different methods in 256×256 resolution on <a href="https://arxiv.org/abs/1607.06986" target="_blank"><span style="font-weight:normal">Ego2Top dataset</span></a>. These samples were randomly selected for visualization purposes.
+</p>
+<br>
+
+
+<br>
+<h1 align="center"> State-of-the-art Comparisons on CVUSA Dataset </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_cvusa_comp.jpg" width="1000"></center>
+<p align="justify"> 
+Results generated by different methods in 256×256 resolution on <a href="http://cs.uky.edu/~jacobs/datasets/cvusa/" target="_blank"><span style="font-weight:normal">CVUSA dataset</span></a>. These samples were randomly selected for visualization purposes.
+</p>
+<br>
+
+<br>
+<h1 align="center"> State-of-the-art Comparisons on Dayton Dataset in a2g Direction </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_dayton_256_a2g_comp.jpg" width="1000"></center>
+<p align="justify"> 
+Results generated by different methods in 256×256 resolution in a2g direction on <a href="https://github.com/lugiavn/gt-crossview" target="_blank"><span style="font-weight:normal">Dayton dataset</span></a>. These sampleswere randomly selected for visualization purposes.
+</p>
+<br>
+
+<br>
+<h1 align="center"> State-of-the-art Comparisons on Dayton Dataset in g2a Direction </h1>
+<center><img src="./SelectionGAN Project Page_files/supp_dayton_256_g2a_comp.jpg" width="1000"></center>
+<p align="justify"> 
+Results generated by different methods in 256×256 resolution in g2a direction on <a href="https://github.com/lugiavn/gt-crossview" target="_blank"><span style="font-weight:normal">Dayton dataset</span></a>. These sampleswere randomly selected for visualization purposes.
+</p>
+<br>
+
+<h1 align="center"> Code, Data and Trained Models</h1>
+	<p align="justify"> Please visit our <a href="https://github.com/Ha0Tang/SelectionGAN_PyTorch" target="_blank">github repo</a>.  </p>
+
+<br>
+<h1>Acknowledgement</h1>
+<p align="justify">This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC),  Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).</p>
+
+<br>
+<h1>Related Work</h1>
+
+<ul id="relatedwork">
+<div align="left">
+<li font-size:="" 15px=""> Phillip  Isola,  Jun-Yan  Zhu,  Tinghui  Zhou,  and  Alexei  AEfros <a href="https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix" target="_blank"><strong>"Image-to-Image Translation with Conditional Adversarial Networks"</strong></a>. In CVPR 2017. (Pix2pix)
+<li font-size:="" 15px=""> Krishna Regmi and Ali Borji. <a href="https://github.com/kregmi/cross-view-image-synthesis/" target="_blank"><strong>"Cross-View Image Synthesis Using Conditional GANs"</strong></a>, in CVPR 2018. (X-Fork & X-Seq)
+</li>
+</div>
+</ul>
+
+
+
+<div style="display:none">
+<script type="text/javascript" src="./SelectionGAN Project Page_files/counter.js"></script>
+<script type="text/javascript">_gos='c3.gostats.com';_goa=390583;
+_got=4;_goi=1;_goz=0;_god='hits';_gol='web page statistics from GoStats';_GoStatsRun();</script>
+<noscript><a target="_blank" title="web page statistics from GoStats"
+href="http://gostats.com"><img alt="web page statistics from GoStats"
+src="http://c3.gostats.com/bin/count/a_390583/t_4/i_1/z_0/show_hits/counter.png"
+style="border-width:0" /></a></noscript>
+</div>
+
+</center></div></body><div><div class="gr_-editor gr-iframe-first-load" style="display: none;"><div class="gr_-editor_back"></div><iframe class="gr_-ifr gr-_dialog-content" src="./SelectionGAN Project Page_files/saved_resource.html"></iframe></div></div><grammarly-card><div></div></grammarly-card><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
