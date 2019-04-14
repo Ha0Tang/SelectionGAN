@@ -139,5 +139,5 @@ If you use this code for your research, please cite our papers.
 ## Acknowledgments
 This code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
 
-## Q & A
-If you have any questions/comments/bug reports, feel free to open a github issue or e-mail to the author Hao Tang [hao.tang@unitn.it](hao.tang@unitn.it)
+## Contributions/Comments
+If you have any ideas/questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang [hao.tang@unitn.it](hao.tang@unitn.it)
