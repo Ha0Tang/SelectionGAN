@@ -58,9 +58,9 @@ Train/Test splits for Dayton dataset can be downloaded from [here](https://githu
 **Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [our paper](https://arxiv.org/abs/1903.072). We also convert semantic maps to the color ones by using this [script](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/convert_sematic_map_dayton.txt).
 Since there is no semantic maps for the aerial images on this dataset, we use black images as aerial semantic maps for placehold purposes.
 
-**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from this [paper](https://sites.google.com/view/shervinardeshir). The trianing and testing splits can downloaded [here](placehold). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training.
+**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from this [paper](https://sites.google.com/view/shervinardeshir). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training. The trianing and testing splits can be downloaded [here](placehold). 
 
-**Preparing New Dataset**. (to do)
+**Preparing New Dataset**. Each training sample in the dataset will contain {A,B,As,Bs} or {B,A,Bs,As}, where A=streetview image, B=aerial image, As=semantic map for streetview image, and Bs=semantic map for aerial image.
 
 ## Generating Images Using Pretrained Model
 
