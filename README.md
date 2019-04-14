@@ -149,6 +149,9 @@ We use several metrics to evaluate the quality of the generated images.
 - Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 
 
+We also provide image IDs used in our paper [here]() for further comparsion.
+
+
 ### Citation
 If you use this code for your research, please cite our papers.
 ```
