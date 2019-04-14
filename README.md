@@ -54,9 +54,9 @@ For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please
 
 **Preparing CVUSA Dataset**. The dataset can be downloaded [here](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data like the samples we given. 
 
-**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from [here](https://sites.google.com/view/shervinardeshir). The trianing and testing splits can downloaded [here]().
+**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from [the paper](https://sites.google.com/view/shervinardeshir). The trianing and testing splits can downloaded [here](placehold). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training.
 
-There are different modes to load images by specifying `--preprocess_mode` along with `--load_size`. `--crop_size`. There are options such as `resize_and_crop`, which resizes the images into square images of side length `load_size` and randomly crops to `crop_size`. `scale_shortside_and_crop` scales the image to have a short side of length `load_size` and crops to `crop_size` x `crop_size` square. To see all modes, please use `python train.py --help` and take a look at `data/base_dataset.py`. By default at the training phase, the images are randomly flipped horizontally. To prevent this use `--no_flip`.
+**Preparing New Dataset**.
 
 ## Generating Images Using Pretrained Model
 
