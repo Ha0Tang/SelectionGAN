@@ -2,8 +2,11 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 
 # SelectionGAN for Cross-View Image Translation
+
+## SelectionGAN Framework
 ![SelectionGAN Framework](./imgs/framework.jpg)
 
+## Multi-Channel Attention Selection Module
 ![Selection Module](./imgs/method.jpg)
 
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) |   [Paper](https://arxiv.org/abs/1903.072)
