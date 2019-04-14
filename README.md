@@ -56,13 +56,13 @@ For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please
 
 **Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from [the paper](https://sites.google.com/view/shervinardeshir). The trianing and testing splits can downloaded [here](placehold). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training.
 
-**Preparing New Dataset**.
+**Preparing New Dataset**. (to do)
 
 ## Generating Images Using Pretrained Model
 
 Once the dataset is ready. The result images can be generated using pretrained models.
 
-1. Download the tar of the pretrained models from the [Google Drive Folder](https://drive.google.com/file/d/12gvlTbMvUcJewQlSEaZdeb2CdOB-b8kQ/view?usp=sharing), save it in 'checkpoints/', and run
+1. Download the tar of the pretrained models from the [Google Drive Folder](placehold), save it in 'checkpoints/', and run
 
     ```
     cd checkpoints
@@ -121,10 +121,6 @@ Use `--results_dir` to specify the output directory. `--how_many` will specify t
 ## Options
 
 This code repo contains many options. Some options belong to only one specific model, and some options have different default values depending on other options. To address this, the `BaseOption` class dynamically loads and sets options depending on what model, network, and datasets are used. This is done by calling the static method `modify_commandline_options` of various classes. It takes in the`parser` of `argparse` package and modifies the list of options. For example, since COCO-stuff dataset contains a special label "unknown", when COCO-stuff dataset is used, it sets `--contain_dontcare_label` automatically at `data/coco_dataset.py`. You can take a look at `def gather_options()` of `options/base_options.py`, or `models/network/__init__.py` to get a sense of how this works.
-
-## VAE-Style Training with an Encoder For Style Control and Multi-Modal Outputs
-
-To train our model along with an image encoder to enable multi-modal outputs as in Figure 15 of the [paper](https://arxiv.org/pdf/1903.07291.pdf), please use `--use_vae`. The model will create `netE` in addition to `netG` and `netD` and train with KL-Divergence loss.
 
 ### Citation
 If you use this code for your research, please cite our papers.
