@@ -1,4 +1,4 @@
-set -ex
-conda install numpy pyyaml mkl mkl-include setuptools cmake cffi typing
-conda install pytorch torchvision -c pytorch # add cuda90 if CUDA 9
-conda install visdom dominate -c conda-forge # install visdom and dominate
+If grayscale label = 0, rgb label = [255, 0, 0]
+If grayscale label = 1, rgb label = [0, 0, 255]
+If grayscale label = 2, rgb label = [0, 0, 0]
+else , rgb label = [0, 255, 0]
