@@ -67,7 +67,7 @@ Of course, you can use SelectionGAN for another generative tasks.
 
 Once the dataset is ready. The result images can be generated using pretrained models.
 
-1. Download the tar of the pretrained models from the [Google Drive Folder](placehold), save it in 'checkpoints/', and run
+1. Download the tar of the pretrained models from the [Google Drive Folder](placehold) or [Baidu Drive Folder](placehold), save it in 'checkpoints/', and run
 
     ```
     cd checkpoints
