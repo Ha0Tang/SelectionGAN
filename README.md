@@ -129,13 +129,14 @@ To train our model along with an image encoder to enable multi-modal outputs as 
 ### Citation
 If you use this code for your research, please cite our papers.
 ```
-@inproceedings{park2019SPADE,
-  title={Semantic Image Synthesis with Spatially-Adaptive Normalization},
-  author={Park, Taesung and Liu, Ming-Yu and Wang, Ting-Chun and Zhu, Jun-Yan},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+@inproceedings{tang2019multichannel,
+  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation},
+  author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
+  booktitle={CVPR},
   year={2019}
 }
+
 ```
 
 ## Acknowledgments
-This code borrows heavily from pix2pixHD. We thank Jiayuan Mao for his Synchronized Batch Normalization code.
+This code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
