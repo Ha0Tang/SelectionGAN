@@ -109,7 +109,7 @@ python train.py --dataroot [path_to_dayton_dataset] --name [experiment_name] --m
 
 python train.py --dataroot [path_to_dataset] --name [experiment_name] --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1
 ```
-- For dayton dataset, [`BS`,`LS`,`FS`]=[4,286,256]
+- For dayton dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 20 --niter_decay 15`.
 - For cvusa dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 15 --niter_decay 15`.
 - For ego2top dataset, [`BS`,`LS`,`FS`]=[8,286,256], append `--niter 5 --niter_decay 5`.
 
