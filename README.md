@@ -6,28 +6,28 @@
 
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) |   [Paper](https://arxiv.org/abs/1903.072)
 
-Semantic Image Synthesis with Spatially-Adaptive Normalization.<br>
-[Taesung Park](http://taesung.me/),  [Ming-Yu Liu](http://mingyuliu.net/), [Ting-Chun Wang](https://tcwang0509.github.io/),  and [Jun-Yan Zhu](http://people.csail.mit.edu/junyanz/).<br>
-In CVPR 2019 (Oral).
+Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation.<br>
+[Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/).<br>
+In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
 
 ### [License](https://raw.githubusercontent.com/nvlabs/SPADE/master/LICENSE.md)
 
-Copyright (C) 2019 NVIDIA Corporation.
+Copyright (C) 2019 University of Trento.
 
 All rights reserved.
 Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**)
 
-The code is released for academic research use only. For commercial use, please contact [researchinquiries@nvidia.com](researchinquiries@nvidia.com).
+The code is released for academic research use only. For commercial use, please contact [haotang@unitn.it](haotang@unitn.it).
 
 ## Installation
 
 Clone this repo.
 ```bash
-git clone https://github.com/NVlabs/SPADE.git
-cd SPADE/
+git clone https://github.com/Ha0Tang/SelectionGAN
+cd SelectionGAN/
 ```
 
-This code requires PyTorch 1.0 and python 3+. Please install dependencies by
+This code requires PyTorch 0.4 and python 3+. Please install dependencies by
 ```bash
 pip install -r requirements.txt
 ```
