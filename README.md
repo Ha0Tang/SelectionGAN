@@ -1,1 +1,1 @@
-# SelectionGAN_PyTorch
+# SelectionGAN
