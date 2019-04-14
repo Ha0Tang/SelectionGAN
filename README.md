@@ -50,7 +50,9 @@ To reproduce the results reported in the paper, you would need an NVIDIA GeForce
 
 For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this code repo.
 
-**Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. We further adopt [RefineNet](https://github.com/guosheng/refinenet) to generate the sematic maps for training.
+**Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. 
+Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
+
 
 **Preparing CVUSA Dataset**. The dataset can be downloaded [here](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data like the samples we given. 
 
