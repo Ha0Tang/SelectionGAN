@@ -137,7 +137,7 @@ Use `--how_many` to specify the maximum number of images to generate. By default
 - `options/`: creates option lists using `argparse` package. More individuals are dynamically added in other files as well. Please see the section below.
 - `data/`: defines the class for loading images and semantic maps.
 
-## Evaluation
+## Evaluation Code
 
 We use several metrics to evaluate the generated images by SelectionGAN.
 
