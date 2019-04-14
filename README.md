@@ -36,7 +36,12 @@ cd SelectionGAN/
 
 This code requires PyTorch 0.4 and python 3+. Please install dependencies by
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt (for pip users)
+```
+or 
+
+```bash
+./scripts/conda_deps.sh (for Conda users)
 ```
 
 To reproduce the results reported in the paper, you would need an NVIDIA GeForce GTX 1080 Ti GPU with 11GB memory.
