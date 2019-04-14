@@ -116,7 +116,8 @@ python train.py --dataroot [path_to_dataset] --name [experiment_name] --model Se
 
 There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. 
 
-To view training results and loss plots, run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
+To view training results and loss plots on local computers, run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
+On a remote server, click the [URL](name_of_the_server:8097).
 
 ## Testing
 
