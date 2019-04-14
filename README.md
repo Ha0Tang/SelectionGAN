@@ -140,12 +140,12 @@ Use `--how_many` to specify the maximum number of images to generate. By default
 
 We use several metrics to evaluate the generated images by SelectionGAN.
 
-- Inception Score: [IS]()
-- Top-k prediction accuracy: [Acc]()
-- KL score: [KL]()
-- Structural-Similarity: [SSIM]()
-- Peak Signal-to-Noise Radio: [PSNR]()
-- Sharpness Difference: [SD]()
+- Inception Score: [IS](), need install `python 2.7`
+- Top-k prediction accuracy: [Acc](), need install `python 2.7`
+- KL score: [KL](), need install `python 2.7`
+- Structural-Similarity: [SSIM](), need install `Lua`
+- Peak Signal-to-Noise Radio: [PSNR](), nedd install 'Lua'
+- Sharpness Difference: [SD](), need install `Lua`
 
 
 ### Citation
