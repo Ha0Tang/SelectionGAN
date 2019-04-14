@@ -4,10 +4,12 @@
 # SelectionGAN for Cross-View Image Translation
 ![SelectionGAN Framework](./imgs/framework.jpg)
 
+![Selection Module](./imgs/method.jpg)
+
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) |   [Paper](https://arxiv.org/abs/1903.072)
 
 Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation.<br>
-[Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/).(* Equal Contribution.)<br> 
+[Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/). (* Equal Contribution.)<br> 
 In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
 
 ### [License](https://raw.githubusercontent.com/nvlabs/SPADE/master/LICENSE.md)
@@ -32,21 +34,13 @@ This code requires PyTorch 0.4 and python 3+. Please install dependencies by
 pip install -r requirements.txt
 ```
 
-This code also requires the Synchronized-BatchNorm-PyTorch rep.
-```
-cd models/networks/
-git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
-cp Synchronized-BatchNorm-PyTorch/sync_batchnorm . -rf
-cd ../../
-```
-
-To reproduce the results reported in the paper, you would need an NVIDIA DGX1 machine with 8 V100 GPUs.
+To reproduce the results reported in the paper, you would need an NVIDIA GeForce GTX 1080 Ti GPU with 11GB memory.
 
 ## Dataset Preparation
 
-For COCO-Stuff, Cityscapes or ADE20K, the datasets must be downloaded beforehand. Please download them on the respective webpages. In the case of COCO-stuff, we put a few sample images in this code repo.
+For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this code repo.
 
-**Preparing COCO-Stuff Dataset**. The dataset can be downloaded [here](https://github.com/nightrome/cocostuff). In particular, you will need to download train2017.zip, val2017.zip, stuffthingmaps_trainval2017.zip, and annotations_trainval2017.zip. The images, labels, and instance maps should be arranged in the same directory structure as in `datasets/coco_stuff/`. In particular, we used an instance map that combines both the boundaries of "things instance map" and "stuff label map". To do this, we used a simple script `datasets/coco_generate_instance_map.py`. Please install `pycocotools` using `pip install pycocotools` and refer to the script to generate instance maps.
+**Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/nightrome/cocostuff). In particular, you will need to download train2017.zip, val2017.zip, stuffthingmaps_trainval2017.zip, and annotations_trainval2017.zip. The images, labels, and instance maps should be arranged in the same directory structure as in `datasets/coco_stuff/`. In particular, we used an instance map that combines both the boundaries of "things instance map" and "stuff label map". To do this, we used a simple script `datasets/coco_generate_instance_map.py`. Please install `pycocotools` using `pip install pycocotools` and refer to the script to generate instance maps.
 
 **Preparing ADE20K Dataset**. The dataset can be downloaded [here](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip), which is from [MIT Scene Parsing BenchMark](http://sceneparsing.csail.mit.edu/). After unzipping the datgaset, put the jpg image files `ADEChallengeData2016/images/` and png label files `ADEChallengeData2016/annotatoins/` in the same directory. 
 
