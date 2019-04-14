@@ -104,7 +104,7 @@ New models can be trained with the following commands.
 
 python train.py --dataroot [path_to_dayton_dataset] --name [experiment_name] --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --niter 50 --niter_decay 50 --loadSize 72 --fineSize 64 --no_flip --lambda_L1 100 --lambda_L1_seg 1 --display_winsize 64 --display_id 1;
 ```
-```
+```bash
 # To train on the datasets on 256*256 resolution, for example.
 
 python train.py --dataroot [path_to_dataset] --name [experiment_name] --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1;
