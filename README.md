@@ -34,7 +34,7 @@ git clone https://github.com/Ha0Tang/SelectionGAN
 cd SelectionGAN/
 ```
 
-This code requires PyTorch 0.4 and python 3+. Please install dependencies by
+This code requires PyTorch 0.4+ and python 3+. Please install dependencies by
 ```bash
 pip install -r requirements.txt (for pip users)
 ```
