@@ -116,32 +116,37 @@ python train.py --dataroot [path_to_dataset] --name [experiment_name] --model Se
 
 There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. 
 
-To log training, use `--tf_log` for Tensorboard. The logs are stored at `[checkpoints_dir]/[name]/logs`.
+To view training results and loss plots, run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
 
 ## Testing
 
 Testing is similar to testing pretrained models.
 
 ```bash
-python test.py --name [name_of_experiment] --dataset_mode [dataset_mode] --dataroot [path_to_dataset]
+python test.py --dataroot [path_to_dataset] --name type]_pretrained --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
 ```
 
-Use `--results_dir` to specify the output directory. `--how_many` will specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
+Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
 ## Code Structure
 
 - `train.py`, `test.py`: the entry point for training and testing.
-- `trainers/pix2pix_trainer.py`: harnesses and reports the progress of training.
-- `models/pix2pix_model.py`: creates the networks, and compute the losses
-- `models/networks/`: defines the architecture of all models
+- `models/selectiongan_model.py`: creates the networks, and compute the losses
+- `models/networks/`: defines the architecture of all models for selectiongan
 - `options/`: creates option lists using `argparse` package. More individuals are dynamically added in other files as well. Please see the section below.
-- `data/`: defines the class for loading images and label maps.
+- `data/`: defines the class for loading images and semantic maps.
 
-## Options
+## Evaluation
 
-This code repo contains many options. Some options belong to only one specific model, and some options have different default values depending on other options. To address this, the `BaseOption` class dynamically loads and sets options depending on what model, network, and datasets are used. This is done by calling the static method `modify_commandline_options` of various classes. It takes in the`parser` of `argparse` package and modifies the list of options. For example, since COCO-stuff dataset contains a special label "unknown", when COCO-stuff dataset is used, it sets `--contain_dontcare_label` automatically at `data/coco_dataset.py`. You can take a look at `def gather_options()` of `options/base_options.py`, or `models/network/__init__.py` to get a sense of how this works.
+We use several metrics to evaluate the generated images by SelectionGAN.
 
-## Evaluation Code
+- Inception Score: [IS]()
+- Top-k prediction accuracy: [Acc]()
+- KL score: [KL]()
+- Structural-Similarity: [SSIM]()
+- Peak Signal-to-Noise Radio: [PSNR]()
+- Sharpness Difference: [SD]()
+
 
 ### Citation
 If you use this code for your research, please cite our papers.
