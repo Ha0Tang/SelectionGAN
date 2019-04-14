@@ -2,7 +2,7 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 
 # SelectionGAN for Cross-View Image Translation
-![SelectionGAN Framework](https://nvlabs.github.io/SPADE//images/framework.jpg)
+![SelectionGAN Framework](./imgs/framework.jpg)
 
 ### [Project page](https://nvlabs.github.io/SPADE/) |   [Paper](https://arxiv.org/abs/1903.07291) | [GTC 2019 demo](https://youtu.be/p5U4NgVGAwg) | [Youtube Demo of GauGAN](https://youtu.be/MXWm6w4E5q0)
 
