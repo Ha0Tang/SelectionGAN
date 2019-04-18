@@ -1,10 +1,11 @@
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC4.0-blue.svg)](https://raw.githubusercontent.com/nvlabs/SPADE/master/LICENSE.md)
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
+[![Packagist](https://img.shields.io/badge/Pytorch-0.4.1-red.svg)]()
+[![Packagist](https://img.shields.io/badge/OS-Ubuntu_16.04-orange.svg)]()
 
 ![SelectionGAN Framework](./imgs/supp_dayton_a2g.jpg)
 
 # SelectionGAN for Cross-View Image Translation (Coming Soon)
-The repository offers the implementation of our [paper](https://arxiv.org/abs/1904.06807) in PyToch.
 
 ## SelectionGAN Framework
 ![SelectionGAN Framework](./imgs/framework.jpg)
@@ -17,6 +18,7 @@ The repository offers the implementation of our [paper](https://arxiv.org/abs/19
 Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation.<br>
 [Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/). (* Equal Contribution.)<br> 
 In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
+The repository offers the implementation of our paper in PyToch.
 
 ### [License](./LICENSE.md)
 
