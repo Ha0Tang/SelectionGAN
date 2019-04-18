@@ -4,6 +4,7 @@
 ![SelectionGAN Framework](./imgs/supp_dayton_a2g.jpg)
 
 # SelectionGAN for Cross-View Image Translation (Coming Soon)
+The repository offers the implementation of our [paper](https://arxiv.org/abs/1904.06807) in PyToch.
 
 ## SelectionGAN Framework
 ![SelectionGAN Framework](./imgs/framework.jpg)
