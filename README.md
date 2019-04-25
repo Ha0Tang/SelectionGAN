@@ -71,16 +71,15 @@ Of course, you can use SelectionGAN for another generative tasks.
 Once the dataset is ready. The result images can be generated using pretrained models.
 
 1. Download the tar of the pretrained models from the [Google Drive Folder](placehold) or [Baidu Drive Folder](placehold), save it in 'checkpoints/', and run
-
-    ```
-    cd checkpoints
-    tar xvf checkpoints.tar.gz
-    cd ../
-    ```
+```
+cd checkpoints
+tar xvf checkpoints.tar.gz
+cd ../
+```
 
 2. Generate images using the pretrained model.
 ```bash
-python test.py --dataroot [path_to_dataset] --name type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
+python test.py --dataroot [path_to_dataset] --name type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval
 ```
 `[path_to_dataset]`, is the path to the dataset. Dataset can be one of `dayton`, `cvusa`, and `ego2top`. `[type]_pretrained` is the directory name of the checkpoint file downloaded in Step 1, which should be one of `dayton_a2g_64_pretrained`, `dayton_g2a_64_pretrained`, `dayton_a2g_256_pretrained`, `dayton_g2a_256_pretrained`, `cvusa_pretrained`,and `ego2top_pretrained`. If you are running on CPU mode, change `--gpu_ids -0` to `--gpu_ids -1`. For [`BS`, `LS`, `FS`],
 
@@ -118,7 +117,6 @@ python train.py --dataroot [path_to_dataset] --name [experiment_name] --model se
 - For cvusa dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 15 --niter_decay 15`.
 - For ego2top dataset, [`BS`,`LS`,`FS`]=[8,286,256], append `--niter 5 --niter_decay 5`.
 
-
 There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. Training will cost about one week with the default `--batchSize` on one NVIDIA GeForce GTX 1080 Ti GPU. So we suggest you use a larger `--batchSize`, while performance is not tested using a larger `--batchSize`.
 
 To view training results and loss plots on local computers, set `display_id` to a non-zero value and run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
@@ -153,9 +151,7 @@ We use several metrics to evaluate the quality of the generated images.
 - Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 - Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 
-
 We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
-
 
 ### Citation
 If you use this code for your research, please cite our papers.
