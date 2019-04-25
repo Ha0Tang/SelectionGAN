@@ -80,7 +80,7 @@ Once the dataset is ready. The result images can be generated using pretrained m
 
 2. Generate images using the pretrained model.
     ```bash
-    python test.py --dataroot [path_to_dataset] --name type]_pretrained --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
+    python test.py --dataroot [path_to_dataset] --name type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
     ```
     `[path_to_dataset]`, is the path to the dataset. Dataset can be one of `dayton`, `cvusa`, and `ego2top`. `[type]_pretrained` is the directory name of the checkpoint file downloaded in Step 1, which should be one of `dayton_a2g_64_pretrained`, `dayton_g2a_64_pretrained`, `dayton_a2g_256_pretrained`, `dayton_g2a_256_pretrained`, `cvusa_pretrained`,and `ego2top_pretrained`. If you are running on CPU mode, change `--gpu_ids -0` to `--gpu_ids -1`. For [`BS`, `LS`, `FS`],
     
@@ -105,29 +105,29 @@ New models can be trained with the following commands.
 ```bash
 # To train on the dayton dataset on 64*64 resolution,
 
-python train.py --dataroot [path_to_dayton_dataset] --name [experiment_name] --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --niter 50 --niter_decay 50 --loadSize 72 --fineSize 64 --no_flip --lambda_L1 100 --lambda_L1_seg 1 --display_winsize 64 --display_id 1
+python train.py --dataroot [path_to_dayton_dataset] --name [experiment_name] --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --niter 50 --niter_decay 50 --loadSize 72 --fineSize 64 --no_flip --lambda_L1 100 --lambda_L1_seg 1 --display_winsize 64 --display_id 0
 ```
 ```bash
 # To train on the datasets on 256*256 resolution,
 
-python train.py --dataroot [path_to_dataset] --name [experiment_name] --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1
+python train.py --dataroot [path_to_dataset] --name [experiment_name] --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1
 ```
 - For dayton dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 20 --niter_decay 15`.
 - For cvusa dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 15 --niter_decay 15`.
 - For ego2top dataset, [`BS`,`LS`,`FS`]=[8,286,256], append `--niter 5 --niter_decay 5`.
 
 
-There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. 
+There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. Training will cost about one week with the default `--batchSize` on one NVIDIA GeForce GTX 1080 Ti GPU. So we suggest you use a larger `--batchSize`, but performance is not tested using a larger `--batchSize`.
 
-To view training results and loss plots on local computers, run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
-On a remote server, replace `localhost` with your server's name, such as [http://sserver.trento.cs.edu:8097](http://server.trento.cs.edu:8097).
+To view training results and loss plots on local computers, set `display_id` to a non-zero value and run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
+On a remote server, replace `localhost` with your server's name, such as [http://server.trento.cs.edu:8097](http://server.trento.cs.edu:8097), where server.trento.cs.edu is your sever's name.
 
 ## Testing
 
 Testing is similar to testing pretrained models.
 
 ```bash
-python test.py --dataroot [path_to_dataset] --name type]_pretrained --model SelectionGAN --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
+python test.py --dataroot [path_to_dataset] --name type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
 ```
 
 Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
