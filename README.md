@@ -12,7 +12,7 @@
 ## Multi-Channel Attention Selection Module
 ![Selection Module](./imgs/method.jpg)
 
-### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) |  [Demo](Demo) |  [Paper](https://arxiv.org/abs/1904.06807) | [Presentation slide](Presentation) | [Poster](Poster)
+### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1904.06807)
 
 Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation.<br>
 [Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/). (* Equal Contribution.)<br> 
