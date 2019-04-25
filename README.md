@@ -4,7 +4,7 @@
 
 ![SelectionGAN Framework](./imgs/supp_dayton_a2g.jpg)
 
-# SelectionGAN for Cross-View Image Translation (Coming Soon)
+# SelectionGAN for Cross-View Image Translation
 
 ## SelectionGAN Framework
 ![SelectionGAN Framework](./imgs/framework.jpg)
