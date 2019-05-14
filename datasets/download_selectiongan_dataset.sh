@@ -7,7 +7,7 @@ fi
 
 echo "Specified [$FILE]"
 
-URL=http://http://disi.unitn.it/~hao.tang/dataset/SelectionGAN/$FILE.tar.gz
+URL=http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/$FILE.tar.gz
 TAR_FILE=./datasets/$FILE.tar.gz
 TARGET_DIR=./datasets/$FILE/
 wget -N $URL -O $TAR_FILE
