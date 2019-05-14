@@ -1,8 +1,10 @@
 FILE=$1
 
-if [[ $FILE != "dayton_ablation" && $FILE != "dayton" && $FILE != "cvusa" && $FILE != "ego2top"]]; then echo "Available datasets are dayton_ablation, dayton, cvusa, ego2top"
-  exit 1
+if [[ $FILE != "dayton_ablation" && $FILE != "dayton" && $FILE != "cvusa" && $FILE != "ego2top" ]]; 
+	then echo "Available datasets are dayton_ablation, dayton, cvusa, ego2top"
+	exit 1
 fi
+
 
 echo "Specified [$FILE]"
 
