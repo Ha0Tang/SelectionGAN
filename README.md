@@ -128,6 +128,10 @@ There are many options you can specify. Please use `python train.py --help`. The
 To view training results and loss plots on local computers, set `display_id` to a non-zero value and run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
 On a remote server, replace `localhost` with your server's name, such as [http://server.trento.cs.edu:8097](http://server.trento.cs.edu:8097).
 
+### Can I continue/resume my training? 
+To fine-tune a pre-trained model, or resume the previous training, use the `--continue_train --which_epoch <int> --epoch_count<int+1>` flag. The program will then load the model based on epoch. Set `--which_epoch <int>` to load a saved checkpoint in your disk. Set `--epoch_count <int+1>` to specify a different starting epoch count.
+
+
 ## Testing
 
 Testing is similar to testing pretrained models.
