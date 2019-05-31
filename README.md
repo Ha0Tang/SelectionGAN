@@ -129,7 +129,7 @@ To view training results and loss plots on local computers, set `display_id` to 
 On a remote server, replace `localhost` with your server's name, such as [http://server.trento.cs.edu:8097](http://server.trento.cs.edu:8097).
 
 ### Can I continue/resume my training? 
-To fine-tune a pre-trained model, or resume the previous training, use the `--continue_train --which_epoch <int> --epoch_count<int+1>` flag. The program will then load the model based on epoch. Set `--which_epoch <int>` to load a saved checkpoint in your disk. Set `--epoch_count <int+1>` to specify a different starting epoch count.
+To fine-tune a pre-trained model, or resume the previous training, use the `--continue_train --which_epoch <int> --epoch_count<int+1>` flag. The program will then load the model based on epoch `<int>` you set in `--which_epoch <int>`. Set `--epoch_count <int+1>` to specify a different starting epoch count.
 
 
 ## Testing
