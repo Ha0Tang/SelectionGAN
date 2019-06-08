@@ -1,10 +1,14 @@
 FILE=$1
 
-echo "Note: available models are edges2shoes, sat2map, map2sat, facades_label2photo, and day2night"
+echo "Note: available models are dayton_a2g_256, dayton_g2a_256, cvusa, dayton_a2g_64, dayton_g2a_64, and ego2top"
 echo "Specified [$FILE]"
 
-mkdir -p ./checkpoints/${FILE}_pretrained
-MODEL_FILE=./checkpoints/${FILE}_pretrained/latest_net_G.pth
-URL=http://efrosgans.eecs.berkeley.edu/pix2pix/models-pytorch/$FILE.pth
+URL=http://disi.unitn.it/~hao.tang/uploads/models/SelectionGAN/${FILE}_pretrained.tar.gz
+TAR_FILE=./checkpoints/${FILE}_pretrained.tar.gz
+TARGET_DIR=./checkpoints/${FILE}_pretrained/
 
-wget -N $URL -O $MODEL_FILE
+wget -N $URL -O $TAR_FILE
+
+mkdir -p $TARGET_DIR
+tar -zxvf $TAR_FILE -C ./checkpoints/
+rm $TAR_FILE
