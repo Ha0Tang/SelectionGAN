@@ -137,7 +137,7 @@ To fine-tune a pre-trained model, or resume the previous training, use the `--co
 Testing is similar to testing pretrained models.
 
 ```bash
-python test.py --dataroot [path_to_dataset] --name type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval
+python test.py --dataroot [path_to_dataset] --name [type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval
 ```
 
 Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
