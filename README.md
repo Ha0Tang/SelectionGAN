@@ -76,12 +76,12 @@ Of course, you can use SelectionGAN for your own datasets.
 
 Once the dataset is ready. The result images can be generated using pretrained models.
 
-1. Download the tar of the pretrained models from the [Google Drive Folder](placehold) or [Baidu Drive Folder](placehold), save it in 'checkpoints/', and run
+1. You can download a pretrained model (e.g. cvusa) with the following script:
+
 ```
-cd checkpoints
-tar xvf checkpoints.tar.gz
-cd ../
+bash ./scripts/download_selectiongan_model.sh cvusa
 ```
+The pretrained model is saved at `./checkpoints/{name}_pretrained`. Check [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/download_selection_model.sh) for all the available SelectionGAN models.
 
 2. Generate images using the pretrained model.
 ```bash
