@@ -18,7 +18,7 @@ Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-V
 [Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/). (* Equal Contribution.)<br> 
 In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
 <br>
-The repository offers the implementation of our paper in PyToch.
+The repository offers the implementation of our paper in PyTorch.
 
 ### [License](./LICENSE.md)
 
