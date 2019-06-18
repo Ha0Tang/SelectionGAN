@@ -20,7 +20,7 @@ In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
 <br>
 The repository offers the implementation of our paper in PyTorch.
 
-![SelectionGAN demo](https://github.com/Ha0Tang/SelectionGAN/tree/master/imgs/SelectionGAN.gif)
+![SelectionGAN demo](https://github.com/Ha0Tang/SelectionGAN/blob/master/imgs/SelectionGAN.gif)
 
 ### [License](./LICENSE.md)
 
