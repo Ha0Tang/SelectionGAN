@@ -21,6 +21,7 @@ In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
 The repository offers the implementation of our paper in PyTorch.
 
 ![SelectionGAN demo](https://github.com/Ha0Tang/SelectionGAN/blob/master/imgs/SelectionGAN.gif)
+Given an image and some novel semantic maps, SelectionGAN is able to generate the same scene image but with different viewpoints.
 
 ### [License](./LICENSE.md)
 
