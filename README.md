@@ -15,7 +15,8 @@
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1904.06807) | [Slides](http://disi.unitn.it/~hao.tang/uploads/slides/SelectionGAN_CVPR19.pptx) | [Video](http://disi.unitn.it/~hao.tang/uploads/videos/SelectionGAN_CVPR19.mp4) | [Poster](http://disi.unitn.it/~hao.tang/uploads/posters/SelectionGAN_CVPR19.pdf)
 
 Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation.<br>
-[Hao Tang*](http://disi.unitn.it/~hao.tang/),  [Dan Xu*](http://www.robots.ox.ac.uk/~danxu/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Yanzhi Wang](https://ywang393.expressions.syr.edu/), [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/) and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/). (* Equal Contribution.)<br> 
+[Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1,2*</sup>,  [Dan Xu](http://www.robots.ox.ac.uk/~danxu/)<sup>3*</sup>, [Nicu Sebe](http://disi.unitn.it/~sebe/)<sup>1,4</sup>, [Yanzhi Wang](https://ywang393.expressions.syr.edu/)<sup>5</sup>, [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/)<sup>6</sup> and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/)<sup>2</sup>. (* Equal Contribution.)<br> 
+<sup>1</sup>University of Trento, Italy, <sup>2</sup>Texas State University, USA, <sup>3</sup>University of Oxford, UK, <sup>4</sup>Huawei Technologies Ireland, Ireland, <sup>5</sup>Northeastern University, USA, <sup>6</sup>University of Michigan, USA   
 In [CVPR 2019](http://cvpr2019.thecvf.com/) (Oral).
 <br>
 The repository offers the implementation of our paper in PyTorch.
