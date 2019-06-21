@@ -146,7 +146,7 @@ class BaseModel():
                     num_params += param.numel()
                 if verbose:
                     print(net)
-                print('[Network %s] Total number of parameters : %.3f M' % (name, num_params / 1e6))
+                print('[Network %s] Total number of parameters : %.5f M' % (name, num_params / 1e6))
         print('-----------------------------------------------')
 
     # set requies_grad=Fasle to avoid computation
