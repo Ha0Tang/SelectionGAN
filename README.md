@@ -27,7 +27,7 @@ Given an image and some novel semantic maps, SelectionGAN is able to generate th
 
 ### [License](./LICENSE.md)
 
-Copyright (C) 2019 University of Trento.
+Copyright (C) 2019 University of Trento, Italy and Texas State University, USA.
 
 All rights reserved.
 Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**)
