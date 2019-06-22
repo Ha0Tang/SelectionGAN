@@ -303,8 +303,8 @@ class UnetGenerator_a(nn.Module):
         f2=feature_image_combine_110*pool_feature2_up
         f3=feature_image_combine_110*pool_feature3_up
 
-        feature_image_combine_330 = torch.cat((f1, f2,f3,feature_image_combine_110), 1)
-        feature_image_combine_110 = self.conv440(feature_image_combine_330)
+        feature_image_combine_440 = torch.cat((f1, f2,f3,feature_image_combine_110), 1)
+        feature_image_combine_110 = self.conv440(feature_image_combine_440)
 
         attention_10 = self.model_attention(feature_image_combine_110)
         image_30 = self.model_image(feature_image_combine_110)
