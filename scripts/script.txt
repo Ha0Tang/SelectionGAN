@@ -1,0 +1,48 @@
+
+## Ablation 
+```
+export CUDA_VISIBLE_DEVICES=5;   
+python train.py --dataroot /data/TH/pytorch-CycleGAN-and-pix2pix_sg2/datasets/dayton --name ablation_segmentation_to_image --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 2 --lambda_L1 100;
+python test.py --dataroot /data/TH/pytorch-CycleGAN-and-pix2pix_sg2/datasets/dayton  --name ablation_segmentation_to_image --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval; 
+```
+## Training & Testing
+
+**dayton_a2g_64**
+
+```
+export CUDA_VISIBLE_DEVICES=0;
+python train.py --dataroot /home/csdept/projects/pytorch-CycleGAN-and-pix2pix_sg2/datasets/dayton_a2g/ --name dayton_a2g_64 --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --niter 50 --niter_decay 50 --loadSize 72 --fineSize 64 --no_flip --lambda_L1 100 --lambda_L1_seg 1 --display_winsize 64 --display_id 1;
+python test.py --dataroot /home/csdept/projects/pytorch-CycleGAN-and-pix2pix_sg2/datasets/dayton_a2g/  --name dayton_a2g_64 --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --eval;
+```
+
+**dayton_g2a_64**
+```
+export CUDA_VISIBLE_DEVICES=0;
+python train.py --dataroot /home/csdept/projects/pytorch-CycleGAN-and-pix2pix_sg2/datasets/dayton_g2a/ --name dayton_g2a_64 --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --niter 50 --niter_decay 50 --loadSize 72 --fineSize 64 --no_flip --lambda_L1 100 --lambda_L1_seg 1 --display_winsize 64 --display_id 2;
+python test.py --dataroot /home/csdept/projects/pytorch-CycleGAN-and-pix2pix_sg2/datasets/dayton_g2a/  --name dayton_g2a_64 --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --eval;
+```
+**dayton_a2g**
+```
+export CUDA_VISIBLE_DEVICES=7;
+python train.py --dataroot /data/TH/dayton_a2g --name dayton_a2g_atte_feature10_rml1_attentionboth_12_tv_disloss4_pooling_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1;
+python test.py --dataroot /data/TH/dayton_a2g  --name dayton_a2g_atte_feature10_rml1_attentionboth_12_tv_disloss4_pooling_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+```
+**dayton_g2a**
+```
+export CUDA_VISIBLE_DEVICES=6;
+python train.py --dataroot /data/TH/dayton_g2a --name dayton_g2a_atte_feature10_rml1_attentionboth_12_tv_disloss4_pooling_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1;
+python test.py --dataroot /data/TH/dayton_g2a  --name dayton_g2a_atte_feature10_rml1_attentionboth_12_tv_disloss4_pooling_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+```
+**cvusa**
+```
+export CUDA_VISIBLE_DEVICES=5;     
+python train.py --dataroot /data/TH/cvusa_fortraining --name cvusa_a2g_data_atte_feature10_rml1_attentionboth_12_tv_disloss4_pooling_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1 --niter 15 --niter_decay 15;
+python test.py --dataroot /data/TH/cvusa_fortraining  --name cvusa_a2g_data_atte_feature10_rml1_attentionboth_12_tv_disloss4_pooling_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+```
+**ego2top**
+```
+export CUDA_VISIBLE_DEVICES=4;
+python train.py --dataroot /data/TH/pytorch-CycleGAN-and-pix2pix_sg2/datasets/ego2top_x/ --name ego2top_x_all_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 8 --niter 5 --niter_decay 5 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1;
+export CUDA_VISIBLE_DEVICES=4;
+python test.py --dataroot /data/TH/ego2top_x_25600_reverse  --name ego2top_x_all_feature --model pix2pix --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 8 --loadSize 286 --fineSize 256 --no_flip --eval;
+```
