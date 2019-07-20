@@ -85,7 +85,7 @@ Once the dataset is ready. The result images can be generated using pretrained m
 ```
 bash ./scripts/download_selectiongan_model.sh cvusa
 ```
-The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/download_selection_model.sh) for all the available SelectionGAN models.
+The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/download_selectiongan_model.sh) for all the available SelectionGAN models.
 
 2. Generate images using the pretrained model.
 ```bash
