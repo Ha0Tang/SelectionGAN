@@ -149,8 +149,8 @@ Use `--how_many` to specify the maximum number of images to generate. By default
 ## Code Structure
 
 - `train.py`, `test.py`: the entry point for training and testing.
-- `models/selectiongan_model.py`: creates the networks, and compute the losses
-- `models/networks/`: defines the architecture of all models for selectiongan
+- `models/selectiongan_model.py`: creates the networks, and compute the losses.
+- `models/networks/`: defines the architecture of all models for SelectionGAN.
 - `options/`: creates option lists using `argparse` package. More individuals are dynamically added in other files as well.
 - `data/`: defines the class for loading images and semantic maps.
 
