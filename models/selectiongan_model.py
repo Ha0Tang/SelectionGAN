@@ -24,7 +24,7 @@ class SelectionGANModel(BaseModel):
         self.isTrain = opt.isTrain
 
         # specify the training losses you want to print out. The program will call base_model.get_current_losses
-        self.loss_names = ['D_G', 'Gi', 'Gs','Ga','G','D_real','D_fake', 'D_D']
+        self.loss_names = ['D_G', 'L1','G','D_real','D_fake', 'D_D']
 
         # specify the images you want to save/display. The program will call base_model.get_current_visuals
         if self.opt.saveDisk:
@@ -45,6 +45,7 @@ class SelectionGANModel(BaseModel):
 
         self.netGs = networks.define_G(3, 3, 4,
                                       opt.which_model_netG, opt.norm, not opt.no_dropout, opt.init_type, opt.init_gain, self.gpu_ids)
+        # 10: the number of attention maps
         self.netGa = networks.define_Ga(110, 10, opt.ngaf,
                                         opt.which_model_netG, opt.norm, not opt.no_dropout, opt.init_type, opt.init_gain, self.gpu_ids)
 
@@ -90,8 +91,8 @@ class SelectionGANModel(BaseModel):
         feature_combine=torch.cat((self.Gi_feature, self.Gs_feature), 1)
         image_combine=torch.cat((self.real_A, self.fake_B), 1)
 
-        # self.I1-I10: intermediate generations
-        # self.A1-A10: attention maps
+        # self.I1-I10: intermediate image generations
+        # self.A1-A10: intermediate attention maps
         # self.O1-O10: multiplication results of intermediate generations and attention maps
         # self.A: uncertainty map
         # self.I: the second image result
@@ -105,10 +106,12 @@ class SelectionGANModel(BaseModel):
 
 
     def backward_D(self):
+        # fake_B
         fake_AB = self.fake_AB_pool.query(torch.cat((self.real_A, self.fake_B), 1))
         pred_D_fake_AB = self.netD(fake_AB.detach())
         self.loss_pred_D_fake_AB = self.criterionGAN(pred_D_fake_AB, False)
 
+        # fake_I
         fake_AI = self.fake_AB_pool.query(torch.cat((self.real_A, self.I), 1))
         pred_D_fake_AI = self.netD(fake_AI.detach())
         self.loss_pred_D_fake_AI = self.criterionGAN(pred_D_fake_AI, False)*4
@@ -127,41 +130,38 @@ class SelectionGANModel(BaseModel):
         self.loss_D_D.backward()
 
     def backward_G(self):
+        # fake_B
         fake_AB = torch.cat((self.real_A, self.fake_B), 1)
         pred_D_fake_AB = self.netD(fake_AB)
         self.loss_D_fake_AB = self.criterionGAN(pred_D_fake_AB, True)
 
+        # fake_I
         fake_AI = torch.cat((self.real_A, self.I), 1)
         pred_D_fake_AI = self.netD(fake_AI)
         self.loss_D_fake_AI = self.criterionGAN(pred_D_fake_AI, True)*4
 
-        self.loss_D_fake = self.loss_D_fake_AB + self.loss_D_fake_AI
+        self.loss_D_G = self.loss_D_fake_AB + self.loss_D_fake_AI
 
-        ##uncertainty guided pixel loss
-        self.loss_Gi_L1_1 = self.criterionL1(self.fake_B, self.real_B) * self.opt.lambda_L1
-        self.loss_Gi_L1 = torch.mean(torch.div(torch.abs(self.fake_B-self.real_B), self.A) + torch.log(self.A)) * self.opt.lambda_L1 + self.loss_Gi_L1_1
-        self.loss_Ga_L1_1 = self.criterionL1(self.I, self.real_B) * self.opt.lambda_L1 *2
-        self.loss_Ga_L1 = torch.mean(torch.div(torch.abs(self.I-self.real_B), self.A) + torch.log(self.A)) * self.opt.lambda_L1*2 + self.loss_Ga_L1_1
+        ## uncertainty guided pixel loss
+        # fake_B
+        self.loss_L1_1 = torch.mean(torch.div(torch.abs(self.fake_B-self.real_B), self.A) + torch.log(self.A)) * self.opt.lambda_L1 + self.criterionL1(self.fake_B, self.real_B) * self.opt.lambda_L1
+        # I
+        self.loss_L1_2 = torch.mean(torch.div(torch.abs(self.I-self.real_B), self.A) + torch.log(self.A)) * self.opt.lambda_L1*2 + self.criterionL1(self.I, self.real_B) * self.opt.lambda_L1 *2
 
+        # fake_D
+        self.loss_L1_3 = torch.mean(torch.div(torch.abs(self.fake_D - self.real_D), self.A) + torch.log(self.A)) * self.opt.lambda_L1_seg + self.criterionL1(self.fake_D, self.real_D) * self.opt.lambda_L1_seg
+        # Is
+        self.loss_L1_4 = torch.mean(torch.div(torch.abs(self.Is - self.real_D), self.A) + torch.log(self.A)) * self.opt.lambda_L1_seg*2 + self.criterionL1(self.Is, self.real_D) * self.opt.lambda_L1_seg*2
+        
+        # Combined loss
+        self.loss_L1 = self.loss_L1_1 + self.loss_L1_2 + self.loss_L1_3 + self.loss_L1_4
 
-        self.loss_Gs_L1_1 = self.criterionL1(self.fake_D, self.real_D) * self.opt.lambda_L1_seg
-        self.loss_Gs_L1_2 = torch.mean(torch.div(torch.abs(self.fake_D - self.real_D), self.A) + torch.log(self.A)) * self.opt.lambda_L1_seg + self.loss_Gs_L1_1
-        self.loss_Gs_L1_3 = self.criterionL1(self.Is, self.real_D) * self.opt.lambda_L1_seg*2
-        self.loss_Gs_L1_4 = torch.mean(torch.div(torch.abs(self.Is - self.real_D), self.A) + torch.log(self.A)) * self.opt.lambda_L1_seg*2 + self.loss_Gs_L1_3
-        ##uncertainty guided pixel loss
-
-        ##total variation regularization
+        ## tv loss
         self.loss_reg = self.opt.REGULARIZATION * (
                 torch.sum(torch.abs(self.I[:, :, :, :-1] - self.I[:, :, :, 1:])) +
                 torch.sum(torch.abs(self.I[:, :, :-1, :] - self.I[:, :, 1:, :])))
-        ##total variation regularization
 
-        self.loss_D_G = self.loss_D_fake
-        self.loss_Gi = self.loss_Gi_L1
-        self.loss_Gs = self.loss_Gs_L1_2 + self.loss_Gs_L1_4
-        self.loss_Ga = self.loss_Ga_L1
-
-        self.loss_G = self.loss_D_G + self.loss_Gi + self.loss_Ga + self.loss_Gs + self.loss_reg
+        self.loss_G = self.loss_D_G + self.loss_L1 + self.loss_reg
 
         self.loss_G.backward()
 

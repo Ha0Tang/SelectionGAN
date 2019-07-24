@@ -81,6 +81,7 @@ def define_G(input_nc, output_nc, ngf, which_model_netG, norm='batch', use_dropo
     elif which_model_netG == 'unet_128':
         netG = UnetGenerator(input_nc, output_nc, 7, ngf, norm_layer=norm_layer, use_dropout=use_dropout)
     elif which_model_netG == 'unet_256':
+        # change 8 to 4 if your image size is 64*64
         netG = UnetGenerator(input_nc, output_nc, 8, ngf, norm_layer=norm_layer, use_dropout=use_dropout)
     else:
         raise NotImplementedError('Generator model name [%s] is not recognized' % which_model_netG)
@@ -265,6 +266,7 @@ class UnetGenerator(nn.Module):
         self.model = unet_block
 
     def forward(self, input):
+        # reture image and feature
         feature, image = self.model(input)
         return feature, image
 
@@ -286,92 +288,91 @@ class UnetGenerator_a(nn.Module):
         self.dropout=nn.Dropout(p=0.5)
         self.relu=nn.ReLU()
         self.tanh = torch.nn.Tanh()
-    def forward(self, feature_combine_136, image_combine_6):
+    def forward(self, feature_combine, image_combine):
 
-        output_feature_104 = self.relu(self.dropout(self.deconvolution_1(feature_combine_136)))
-        feature_image_combine_110 = torch.cat((output_feature_104, image_combine_6), 1)
+        output_feature = self.relu(self.dropout(self.deconvolution_1(feature_combine))) # feature_combine: 136, output_feature: 104
+        feature_image_combine = torch.cat((output_feature, image_combine), 1) # image_combine: 6; feature_image_combine: 110
 
-        pool_feature1= self.pool1(feature_image_combine_110)
-        pool_feature2= self.pool2(feature_image_combine_110)
-        pool_feature3= self.pool3(feature_image_combine_110)
+        pool_feature1 = self.pool1(feature_image_combine)
+        pool_feature2 = self.pool2(feature_image_combine)
+        pool_feature3 = self.pool3(feature_image_combine)
 
         pool_feature1_up = F.upsample(input=pool_feature1, size=(256, 256), mode='bilinear', align_corners=True)
         pool_feature2_up = F.upsample(input=pool_feature2, size=(256, 256), mode='bilinear', align_corners=True)
         pool_feature3_up = F.upsample(input=pool_feature3, size=(256, 256), mode='bilinear', align_corners=True)
 
-        f1=feature_image_combine_110*pool_feature1_up
-        f2=feature_image_combine_110*pool_feature2_up
-        f3=feature_image_combine_110*pool_feature3_up
+        f1 = feature_image_combine * pool_feature1_up
+        f2 = feature_image_combine * pool_feature2_up
+        f3 = feature_image_combine * pool_feature3_up
 
-        feature_image_combine_440 = torch.cat((f1, f2,f3,feature_image_combine_110), 1)
-        feature_image_combine_110 = self.conv440(feature_image_combine_440)
+        feature_image_combine = torch.cat((f1, f2, f3, feature_image_combine), 1) # feature_image_combine: 440
+        feature_image_combine = self.conv440(feature_image_combine) # feature_image_combine: 110
 
-        attention_10 = self.model_attention(feature_image_combine_110)
-        image_30 = self.model_image(feature_image_combine_110)
+        attention = self.model_attention(feature_image_combine) # attention: 10
+        image = self.model_image(feature_image_combine) # image: 30
 
         softmax_ = torch.nn.Softmax(dim=1)
-        attention_10_ = softmax_(attention_10)
+        attention = softmax_(attention)
 
-        attention1 = attention_10_[:, 0:1, :, :]
-        attention2 = attention_10_[:, 1:2, :, :]
-        attention3 = attention_10_[:, 2:3, :, :]
-        attention4 = attention_10_[:, 3:4, :, :]
-        attention5 = attention_10_[:, 4:5, :, :]
-        attention6 = attention_10_[:, 5:6, :, :]
-        attention7 = attention_10_[:, 6:7, :, :]
-        attention8 = attention_10_[:, 7:8, :, :]
-        attention9 = attention_10_[:, 8:9, :, :]
-        attention10 = attention_10_[:, 9:10, :, :]
+        attention1_ = attention[:, 0:1, :, :]
+        attention2_ = attention[:, 1:2, :, :]
+        attention3_ = attention[:, 2:3, :, :]
+        attention4_ = attention[:, 3:4, :, :]
+        attention5_ = attention[:, 4:5, :, :]
+        attention6_ = attention[:, 5:6, :, :]
+        attention7_ = attention[:, 6:7, :, :]
+        attention8_ = attention[:, 7:8, :, :]
+        attention9_ = attention[:, 8:9, :, :]
+        attention10_ = attention[:, 9:10, :, :]
 
-        attention1_ = attention1.repeat(1, 3, 1, 1)
-        attention2_ = attention2.repeat(1, 3, 1, 1)
-        attention3_ = attention3.repeat(1, 3, 1, 1)
-        attention4_ = attention4.repeat(1, 3, 1, 1)
-        attention5_ = attention5.repeat(1, 3, 1, 1)
-        attention6_ = attention6.repeat(1, 3, 1, 1)
-        attention7_ = attention7.repeat(1, 3, 1, 1)
-        attention8_ = attention8.repeat(1, 3, 1, 1)
-        attention9_ = attention9.repeat(1, 3, 1, 1)
-        attention10_ = attention10.repeat(1, 3, 1, 1)
+        attention1 = attention1_.repeat(1, 3, 1, 1)
+        attention2 = attention2_.repeat(1, 3, 1, 1)
+        attention3 = attention3_.repeat(1, 3, 1, 1)
+        attention4 = attention4_.repeat(1, 3, 1, 1)
+        attention5 = attention5_.repeat(1, 3, 1, 1)
+        attention6 = attention6_.repeat(1, 3, 1, 1)
+        attention7 = attention7_.repeat(1, 3, 1, 1)
+        attention8 = attention8_.repeat(1, 3, 1, 1)
+        attention9 = attention9_.repeat(1, 3, 1, 1)
+        attention10 = attention10_.repeat(1, 3, 1, 1)
 
-        image_30 = self.tanh(image_30)
+        image = self.tanh(image)
 
-        image1 = image_30[:, 0:3, :, :]
-        image2 = image_30[:, 3:6, :, :]
-        image3 = image_30[:, 6:9, :, :]
-        image4 = image_30[:, 9:12, :, :]
-        image5 = image_30[:, 12:15, :, :]
-        image6 = image_30[:, 15:18, :, :]
-        image7 = image_30[:, 18:21, :, :]
-        image8 = image_30[:, 21:24, :, :]
-        image9 = image_30[:, 24:27, :, :]
-        image10 = image_30[:, 27:30, :, :]
+        image1 = image[:, 0:3, :, :]
+        image2 = image[:, 3:6, :, :]
+        image3 = image[:, 6:9, :, :]
+        image4 = image[:, 9:12, :, :]
+        image5 = image[:, 12:15, :, :]
+        image6 = image[:, 15:18, :, :]
+        image7 = image[:, 18:21, :, :]
+        image8 = image[:, 21:24, :, :]
+        image9 = image[:, 24:27, :, :]
+        image10 = image[:, 27:30, :, :]
 
-        output1 = image1 * attention1_
-        output2 = image2 * attention2_
-        output3 = image3 * attention3_
-        output4 = image4 * attention4_
-        output5 = image5 * attention5_
-        output6 = image6 * attention6_
-        output7 = image7 * attention7_
-        output8 = image8 * attention8_
-        output9 = image9 * attention9_
-        output10 = image10 * attention10_
+        output1 = image1 * attention1
+        output2 = image2 * attention2
+        output3 = image3 * attention3
+        output4 = image4 * attention4
+        output5 = image5 * attention5
+        output6 = image6 * attention6
+        output7 = image7 * attention7
+        output8 = image8 * attention8
+        output9 = image9 * attention9
+        output10 = image10 * attention10
 
         output11 = output1 + output2 + output3 + output4 + output5 + output6 + output7 + output8 + output9 + output10
 
         ##uncertainty map generation
         sigmoid_ = torch.nn.Sigmoid()
-        attention_all = self.convolution_for_attention(attention_10)
+        uncertainty = self.convolution_for_attention(attention)
 
-        attention_all = sigmoid_(attention_all)
-        attention_all_ = attention_all.repeat(1, 3, 1, 1)
-        ##uncertainty map generation
+        uncertainty = sigmoid_(uncertainty)
+        uncertainty_map = uncertainty.repeat(1, 3, 1, 1)
 
         return image1, image2, image3, image4, image5, image6, image7, image8, image9, image10,\
                attention1_, attention2_, attention3_, attention4_, attention5_, attention6_, attention7_, attention8_, attention9_, attention10_, \
                output1, output2, output3, output4, output5, output6, output7, output8, output9, output10, \
-               attention_all_, output11
+               uncertainty_map, output11
 
 
 class UnetSkipConnectionBlock(nn.Module):
@@ -427,6 +428,7 @@ class UnetSkipConnectionBlock(nn.Module):
         self.model = nn.Sequential(*model)
 
     def forward(self, x):
+        # returen feature and image
         if self.outermost:
             x1 = self.down(x)
             x2 = self.submodule(x1)
