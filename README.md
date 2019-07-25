@@ -129,12 +129,43 @@ New models can be trained with the following commands.
 ```bash
 # To train on the dayton dataset on 64*64 resolution,
 
-python train.py --dataroot [path_to_dayton_dataset] --name [experiment_name] --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize 16 --niter 50 --niter_decay 50 --loadSize 72 --fineSize 64 --no_flip --lambda_L1 100 --lambda_L1_seg 1 --display_winsize 64 --display_id 0
+python train.py --dataroot [path_to_dayton_dataset] \
+	--name [experiment_name] \
+	--model selectiongan \
+	--which_model_netG unet_256 \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm batch \
+	--gpu_ids 0 \
+	--batchSize 16 \
+	--niter 50 \
+	--niter_decay 50 \
+	--loadSize 72 \
+	--fineSize 64 \
+	--no_flip \
+	--lambda_L1 100 \
+	--lambda_L1_seg 1 \
+	--display_winsize 64 \
+	--display_id 0
 ```
 ```bash
 # To train on the datasets on 256*256 resolution,
 
-python train.py --dataroot [path_to_dataset] --name [experiment_name] --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --display_id 0 --lambda_L1 100 --lambda_L1_seg 1
+python train.py --dataroot [path_to_dataset] \
+	--name [experiment_name] \
+	--model selectiongan \
+	--which_model_netG unet_256 \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm batch \
+	--gpu_ids 0 \
+	--batchSize [BS] \
+	--loadSize [LS] \
+	--fineSize [FS] \
+	--no_flip \
+	--display_id 0 \
+	--lambda_L1 100 \
+	--lambda_L1_seg 1
 ```
 - For dayton dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 20 --niter_decay 15`.
 - For cvusa dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 15 --niter_decay 15`.
@@ -154,7 +185,19 @@ To fine-tune a pre-trained model, or resume the previous training, use the `--co
 Testing is similar to testing pretrained models.
 
 ```bash
-python test.py --dataroot [path_to_dataset] --name [type]_pretrained --model selectiongan --which_model_netG unet_256 --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval
+python test.py --dataroot [path_to_dataset] \
+	--name [type]_pretrained \
+	--model selectiongan \
+	--which_model_netG unet_256 \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm batch \
+	--gpu_ids 0 \
+	--batchSize [BS] \
+	--loadSize [LS] \
+	--fineSize [FS] \
+	--no_flip \
+	--eval
 ```
 
 Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
