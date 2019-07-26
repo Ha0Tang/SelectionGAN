@@ -213,6 +213,7 @@ Use `--how_many` to specify the maximum number of images to generate. By default
 - `models/networks/`: defines the architecture of all models for SelectionGAN.
 - `options/`: creates option lists using `argparse` package. More individuals are dynamically added in other files as well.
 - `data/`: defines the class for loading images and semantic maps.
+- `scripts/evaluation`: several evaluation source codes.
 
 ## Evaluation Code
 
