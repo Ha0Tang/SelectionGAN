@@ -6,6 +6,12 @@
 ![Contributing](https://img.shields.io/badge/contributions-welcome-red.svg?style=flat)
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Ha0Tang/SelectionGAN/issues/)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-2)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-2?p=multi-channel-attention-selection-gan-with)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-3)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-3?p=multi-channel-attention-selection-gan-with)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on?p=multi-channel-attention-selection-gan-with)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-1)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-1?p=multi-channel-attention-selection-gan-with)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-4)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-4?p=multi-channel-attention-selection-gan-with)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-5)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-5?p=multi-channel-attention-selection-gan-with)
 
 ![SelectionGAN Framework](./imgs/supp_dayton_a2g.jpg)
 
