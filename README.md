@@ -17,7 +17,7 @@
 ## Multi-Channel Attention Selection Module
 ![Selection Module](./imgs/method.jpg)
 
-## Oral Presentation Video
+## Oral Presentation Video (click image to play)
 [![Watch the video](https://github.com/Ha0Tang/SelectionGAN/blob/master/imgs/SelectionGAN.png)](https://youtu.be/9GR8V-VR4Qg?t=3389)
 
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1904.06807) | [Slides](http://disi.unitn.it/~hao.tang/uploads/slides/SelectionGAN_CVPR19.pptx) | [Video](http://disi.unitn.it/~hao.tang/uploads/videos/SelectionGAN_CVPR19.mp4) | [Poster](http://disi.unitn.it/~hao.tang/uploads/posters/SelectionGAN_CVPR19.pdf)
