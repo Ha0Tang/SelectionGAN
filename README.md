@@ -234,7 +234,8 @@ We use several metrics to evaluate the quality of the generated images.
 
 We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
 
-### Citation
+## Citation
+
 If you use this code for your research, please cite our papers.
 ```
 @inproceedings{tang2019multichannel,
