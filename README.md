@@ -256,8 +256,8 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
 
 ## To Do List
-- [x] SelectionGAN
 - [ ] SelectionGAN--
+- [x] SelectionGAN
 - [ ] SelectionGAN++
 - [ ] Pix2pix++
 - [ ] X-ForK++
