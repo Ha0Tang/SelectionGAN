@@ -255,5 +255,13 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
 - [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
 
+## To Do List
+- [x] SelectionGAN
+- [ ] SelectionGAN--
+- [ ] SelectionGAN++
+- [ ] Pix2pix++
+- [ ] X-ForK++
+- [ ] X-Seq++
+
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
