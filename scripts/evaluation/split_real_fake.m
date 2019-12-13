@@ -1,5 +1,5 @@
 close all; clear all; clc
-path='/data4/hao/PAMI/SelectionGAN--/results/ego2top_selectiongan_jian/test_latest/';
+path='./test_latest/';
 Image_folder=    strcat(path, 'images');
 save_fake_folder=strcat(path, 'fakeimage_B');
 save_I_folder=   strcat(path, 'output_image');
