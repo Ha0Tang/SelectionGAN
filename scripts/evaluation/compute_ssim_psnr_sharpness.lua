@@ -1,3 +1,5 @@
+-- th compute_ssim_psnr_sharpness.lua ./realimage_folder ./fakeimage_folder 
+
 require 'torch'
 require 'paths'
 require 'image'
