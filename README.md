@@ -262,16 +262,16 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 
 ## Related Projects
 - [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
-- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix): [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
-- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet): [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
-- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN): [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
+- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
+- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
 - [ ] SelectionGAN++:
-- [x] Pix2pix++: takes RGB image and target semantic map as inputs
-- [x] X-ForK++: takes RGB image and target semantic map as inputs
-- [x] X-Seq++: takes RGB image and target semantic map as inputs
+- [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
+- [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
+- [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
