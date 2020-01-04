@@ -262,9 +262,9 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 
 ## Related Projects
 - [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
-- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
-- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
+- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix): [code]()
+- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet):
+- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN):
 
 ## To Do List
 - [x] SelectionGAN
