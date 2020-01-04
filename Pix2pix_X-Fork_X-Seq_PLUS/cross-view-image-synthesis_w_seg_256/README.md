@@ -59,7 +59,7 @@ DATA_ROOT=./datasets/sva name=sva_seq_plus which_direction=g2a phase=train niter
 DATA_ROOT=./datasets/sva name=sva_seq_plus which_direction=g2a phase=test which_epoch=20 th test_seq.lua;
 ```
 
-### Models
+### Pretrained Models
 Pretrained models can be downloaded by using:
 ```
 bash ./scripts/download_plus_model.sh [dataset_name]_[model_name]_plus
