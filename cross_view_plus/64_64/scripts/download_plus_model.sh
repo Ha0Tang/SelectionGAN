@@ -1,6 +1,6 @@
 FILE=$1
 
-echo "Note: available models are cvusa_fork_plus, cvusa_pix2pix_plus, cvusa_seq_plus, dayton_a2g_fork_plus, dayton_a2g_seq_plus, dayton_a2g_pix2pix_plus, dayton_g2a_pix2pix_plus, dayton_g2a_seq_plus, dayton_g2a_fork_plus, ego2top_fork_plus, ego2top_seq_plus, ego2top_pix2pix_plus, sva_pix2pix_plus, sva_seq_plus and sva_fork_plus"
+echo "Note: available models are dayton_a2g_fork_plus_64, dayton_a2g_seq_plus_64, dayton_a2g_pix2pix_plus_64, dayton_g2a_fork_plus_64, dayton_g2a_seq_plus_64 and dayton_g2a_pix2pix_plus_64"
 echo "Specified [$FILE]"
 
 URL=http://disi.unitn.it/~hao.tang/uploads/models/SelectionGAN/${FILE}_pretrained.tar.gz
