@@ -269,9 +269,9 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 ## To Do List
 - [x] SelectionGAN: CVPR version
 - [ ] SelectionGAN++:
-- [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
-- [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
-- [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_plus)
+- [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
+- [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
+- [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
