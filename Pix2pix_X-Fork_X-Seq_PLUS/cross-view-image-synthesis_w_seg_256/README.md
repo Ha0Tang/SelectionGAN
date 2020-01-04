@@ -1,5 +1,4 @@
-## Code
-This code tries to handle cross-view image translation task with the combination of RGB images and target semantic maps as inputs.
+This code aims to handle cross-view image translation task with the combination of RGB images and target semantic maps as inputs.
 The code is borrowed from [pix2pix](https://github.com/phillipi/pix2pix) and [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis). 
 
 ## Setup
