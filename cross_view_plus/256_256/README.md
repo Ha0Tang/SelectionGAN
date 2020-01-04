@@ -63,8 +63,10 @@ Pretrained models can be downloaded by using:
 ```
 bash ./scripts/download_plus_model.sh [dataset_name]_[model_name]_plus
 ```
-<<<<<<< HEAD
-=======
 - `[dataset_name]`: cvusa, sva, ego2top, dayton_a2g, dayton_g2a
 - `[model_name]`: pix2pix, seq, fork
->>>>>>> 725103314e2a5512b9a988671db9ecea7b57b281
+
+Then to generate images using (e.g., sva_seq):
+```
+DATA_ROOT=./datasets/sva name=sva_seq_plus_pretrained which_direction=g2a phase=test which_epoch=latest th test_seq.lua;
+```
