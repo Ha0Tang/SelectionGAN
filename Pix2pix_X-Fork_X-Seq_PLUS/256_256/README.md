@@ -18,7 +18,7 @@ cd 256_256 (For 256*256 resolution)
 cd 64_64 (For 64*64 resolution)
 ```
 
-## Training and Test data
+## Training and Testing
 ### Datasets
 Download datasets.
 
