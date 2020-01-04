@@ -64,4 +64,5 @@ Pretrained models can be downloaded by using:
 ```
 bash ./scripts/download_plus_model.sh [dataset_name]_[model_name]_plus
 ```
-Place the models in `./checkpoints/` after the download has finished.
+- `[dataset_name]`: cvusa, sva, ego2top, dayton_a2g, dayton_g2a
+- `[model_name]`: pix2pix, seq, fork
