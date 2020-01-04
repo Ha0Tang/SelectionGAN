@@ -231,6 +231,7 @@ We use several metrics to evaluate the quality of the generated images.
 - Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 - Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 - Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
+- FID: [FID](https://github.com/bioinf-jku/TTUR), need install `TF 1.1+ and Python 3.x`
 
 We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
 
@@ -256,7 +257,6 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
 
 ## To Do List
-- [ ] SelectionGAN--
 - [x] SelectionGAN
 - [ ] SelectionGAN++
 - [ ] Pix2pix++
