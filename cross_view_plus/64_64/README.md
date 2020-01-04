@@ -1,12 +1,5 @@
-# cross-view-image-synthesis
-[[Project](https://kregmi.github.io/cross-view-image-synthesis)] [[Paper](http://openaccess.thecvf.com/content_cvpr_2018/papers/Regmi_Cross-View_Image_Synthesis_CVPR_2018_paper.pdf)]
-
-
-## Abstract
-Learning to generate natural scenes has always been a challenging task in computer vision. It is even more painstaking when the generation is conditioned on images with drastically different views. This is mainly because understanding, corresponding, and transforming appearance and semantic information across the views is not trivial. In this paper, we attempt to solve the novel problem of cross-view image synthesis, aerial to street-view and vice versa, using conditional generative adversarial networks (cGAN). Two new architectures called Crossview Fork (X-Fork) and Crossview Sequential (X-Seq) are proposed to generate scenes with resolutions of 64x64 and 256x256 pixels. X-Fork architecture has a single discriminator and a single generator. The generator hallucinates both the image and its semantic segmentation in the target view. X-Seq architecture utilizes two cGANs. The first one generates the target image which is subsequently fed to the second cGAN for generating its corresponding semantic segmentation map. The feedback from the second cGAN helps the first cGAN generate sharper images. Both of our proposed architectures learn to generate natural images as well as their semantic segmentation maps. The proposed methods show that they are able to capture and maintain the true semantics of objects in source and target views better than the traditional image-to-image translation method which considers only the visual appearance of the scene. Extensive qualitative and quantitative evaluations support the effectiveness of our frameworks, compared to two state of the art methods, for natural scene generation across drastically different views.
-
-## Code
-Our code is borrowed from [pix2pix](https://github.com/phillipi/pix2pix). The data loader is modified to handle images and semantic segmentation maps.
+This code aims to handle cross-view image translation task with the combination of RGB images and target semantic maps as inputs.
+The code is borrowed from [pix2pix](https://github.com/phillipi/pix2pix) and [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis). 
 
 ## Setup
 
@@ -19,82 +12,59 @@ luarocks install https://raw.githubusercontent.com/szym/display/master/display-s
 ```
 - Clone this repo:
 ```bash
-git clone git@github.com:kregmi/cross-view-image-synthesis.git
-cd cross-view-image-synthesis
+git clone https://github.com/Ha0Tang/SelectionGAN
+cd cross_view_plus
+cd 64_64
 ```
 
-- Training the model
-```bash
-DATA_ROOT=./datasets/AB_AsBs name=sample_images which_direction=a2g phase=sample th train_fork.lua
-```
-- For CPU only training: 
-```bash
-DATA_ROOT=./datasets/AB_AsBs name=sample_images which_direction=a2g phase=sample gpu=0 cudnn=0 th train_fork.lua
-```
-- Testing the model:
-```bash
-DATA_ROOT=./datasets/AB_AsBs name=sample_images which_direction=a2g phase=sample which_epoch=35 th test_fork.lua 
-```
-The test results will be saved to: `./results/sample_images/35_net_G_sample/images/`.
-
-## Training and Test data
+## Training and Testing
 ### Datasets
-The original datasets are available here:
-1. [GT-CrossView](https://github.com/lugiavn/gt-crossview)
-2. [CVUSA](http://cs.uky.edu/~jacobs/datasets/cvusa/)
+Download datasets.
 
-Ground Truth semantic segmentation maps are not available for the datasets. We used RefineNet trained on CityScapes for generating semantic segmentation maps and used them as Gound Truth segmaps in our experiments. Please cite their papers if you use the dataset.
-
-Train/Test splits for Dayton dataset can be downloaded from here [Dayton](https://github.com/kregmi/cross-view-image-synthesis/tree/master/datasets/dayton_split). 
-
-### Generating Pairs
-Refer to [pix2pix](https://github.com/phillipi/pix2pix/blob/master/scripts/combine_A_and_B.py) for steps and code to generate pairs of images required for training/testing.
-
-First concatenate the streetview and aerial images followed by concatenating their segmentation maps and finally concatenating them all along the columns. Each concatenated image file in the dataset will contain {A,B,As,Bs}, 
-where A=streetview image, B=aerial image, As=segmentation map for streetview image, and Bs=segmentation map for aerial image.
-
-## Train
+### Pix2pix++ Train/Test
 ```bash
-DATA_ROOT=/path/to/data/ name=expt_name which_direction=a2g th train_fork.lua
-```
-Switch `a2g` to `g2a` to train in opposite direction.
+export CUDA_VISIBLE_DEVICES=0；
+DATA_ROOT=./datasets/dayton name=dayton_a2g_pix2pix_plus_64 which_direction=g2a phase=train loadSize=64 fineSize=64 niter=100 th train_pix2pix.lua;
+DATA_ROOT=./datasets/dayton name=dayton_a2g_pix2pix_plus_64 which_direction=g2a phase=test loadSize=64 fineSize=64 which_epoch=100 th test_pix2pix.lua;
 
-Models are saved to `./checkpoints/expt_name` (can be changed by passing `checkpoint_dir=your_dir` in train_fork.lua).
-
-See `opt` in train_fork.lua for additional training options.
-
-## Test
-```bash
-DATA_ROOT=/path/to/data/ name=expt_name which_direction=a2g phase=val th test_fork.lua
+export CUDA_VISIBLE_DEVICES=0；
+DATA_ROOT=./datasets/dayton name=dayton_g2a_pix2pix_plus_64 which_direction=a2g phase=train loadSize=64 fineSize=64 niter=100 th train_pix2pix.lua;
+DATA_ROOT=./datasets/dayton name=dayton_g2a_pix2pix_plus_64 which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=100 th test_pix2pix.lua;
 ```
 
-This will run the model named `expt_name` in direction `a2g` on all images in `/path/to/data/val`.
+### X-Fork++ Train/Test
+```bash
+export CUDA_VISIBLE_DEVICES=1；
+DATA_ROOT=./datasets/dayton name=dayton_a2g_fork_plus_64 which_direction=g2a phase=train loadSize=64 fineSize=64 niter=100 th train_fork.lua;
+DATA_ROOT=./datasets/dayton name=dayton_a2g_fork_plus_64 which_direction=g2a phase=test loadSize=64 fineSize=64 which_epoch=100 th test_fork.lua;
 
-Result images, and a webpage to view them, are saved to `./results/expt_name` (can be changed by passing `results_dir=your_dir` in test_fork.lua).
+export CUDA_VISIBLE_DEVICES=1；
+DATA_ROOT=./datasets/dayton name=dayton_g2a_fork_plus_64 which_direction=a2g phase=train loadSize=64 fineSize=64 niter=100 th train_fork.lua;
+DATA_ROOT=./datasets/dayton name=dayton_g2a_fork_plus_64 which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=100 th test_fork.lua;
 
-See `opt` in test_fork.lua for additional testing options.
+```
 
-## Models
-Pretrained models can be downloaded here.
+### X-Seq++ Train/Test
+```bash
+export CUDA_VISIBLE_DEVICES=1；
+DATA_ROOT=./datasets/dayton name=dayton_a2g_seq_plus_64 which_direction=g2a phase=train loadSize=64 fineSize=64 niter=100 th train_seq.lua;
+DATA_ROOT=./datasets/dayton name=dayton_a2g_seq_plus_64 which_direction=g2a phase=test loadSize=64 fineSize=64 which_epoch=100 th test_seq.lua;
 
-[[X-Pix2pix]](https://drive.google.com/open?id=1y5E4XNWiYz5s80Yb9TwVyqFqnZJ3byoJ)   [[X-Fork]](https://drive.google.com/open?id=1DsXaEJJy_iHjd819ZU_zKu8x3VzHHCYO)   [[X-Seq](https://drive.google.com/open?id=11VA_ipbSv6Y_cqNG0BouQwK8LbiJEgiX)]
+export CUDA_VISIBLE_DEVICES=1；
+DATA_ROOT=./datasets/dayton name=dayton_g2a_seq_plus_64 which_direction=a2g phase=train loadSize=64 fineSize=64 niter=100 th train_seq.lua;
+DATA_ROOT=./datasets/dayton name=dayton_g2a_seq_plus_64 which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=100 th test_seq.lua;
 
-Place the models in `./checkpoints/` after the download has finished.
+```
 
-## Results
+### Pretrained Models
+Pretrained models can be downloaded by using:
+```
+bash ./scripts/download_plus_model.sh [dataset_name]_[model_name]_plus
+```
+- `[dataset_name]`: cvusa, sva, ego2top, dayton_a2g, dayton_g2a
+- `[model_name]`: pix2pix, seq, fork
 
-Some qualitative results on GT-CrossView Dataset:
-
-![result](test_256.jpg)
-
-## CVPR Poster
-![poster](cross-view-image-synthesis-poster.jpg)
-
-
-## Citation
-If you use this code for your research, please cite our paper: [bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:YKphbKKT1tEJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAXAB63S3ndlUD4sgxTrQK1OFXi_NJ9yHb&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1)
-
-
-## Questions
-
-Please contact: 'krishna.regmi7@gmail.com'
+Then to generate images using (e.g., sva_seq):
+```
+DATA_ROOT=./datasets/sva name=sva_seq_plus_pretrained which_direction=g2a phase=test which_epoch=latest th test_seq.lua;
+```

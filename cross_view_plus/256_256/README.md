@@ -13,7 +13,7 @@ luarocks install https://raw.githubusercontent.com/szym/display/master/display-s
 - Clone this repo:
 ```bash
 git clone https://github.com/Ha0Tang/SelectionGAN
-cd Pix2pix_X-Fork_X-Seq_PLUS
+cd cross_view_plus
 cd 256_256
 ```
 
