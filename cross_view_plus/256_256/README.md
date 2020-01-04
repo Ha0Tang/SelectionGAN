@@ -14,8 +14,7 @@ luarocks install https://raw.githubusercontent.com/szym/display/master/display-s
 ```bash
 git clone https://github.com/Ha0Tang/SelectionGAN
 cd Pix2pix_X-Fork_X-Seq_PLUS
-cd 256_256 (For 256*256 resolution)
-cd 64_64 (For 64*64 resolution)
+cd 256_256
 ```
 
 ## Training and Testing
@@ -64,3 +63,8 @@ Pretrained models can be downloaded by using:
 ```
 bash ./scripts/download_plus_model.sh [dataset_name]_[model_name]_plus
 ```
+<<<<<<< HEAD
+=======
+- `[dataset_name]`: cvusa, sva, ego2top, dayton_a2g, dayton_g2a
+- `[model_name]`: pix2pix, seq, fork
+>>>>>>> 725103314e2a5512b9a988671db9ecea7b57b281
