@@ -18,7 +18,7 @@ cd cross-view-image-synthesis-256 (For 256*256 resolution)
 cd cross-view-image-synthesis-64 (For 64*64 resolution)
 ```
 
-## Training and Test data
+## Training and Testing
 ### Datasets
 Download datasets.
 
