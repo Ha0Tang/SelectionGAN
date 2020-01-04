@@ -2,3 +2,4 @@ Dayton 64*64 resolutions (Supplementary Figure 5): 3Jzl3r0yqwdVqN48Za6-Tw.x919.y
 Dayton 256*256 resolutions (Figure 4):  Z0C4WPCZE9S_DYkXYeDCRQ.x1584.y327.a-108.jpg, nk0YG7U3Wkn5Jjp9RuNu6w.x1622.y434.a-55.jpg, It8IotIuMpMdvW1I4rFuiw.x1574.y454.a74.jpg, gGhCRWQNNYYPwAzz8lqg2w.x498.y437.a104.jpg, nHRCbw-QPnZOzWnqN6EqUA.x1532.y472.a-32.jpg
 CVUSA (Figure 5): 0019405.jpg, 0021208.jpg, 0021376.jpg, 0001332.jpg, 0002462.jpg, 0000052.jpg, 0002487.jpg
 SVA: 033_004170.jpg, 011_001290.jpg, 014_001130.jpg, 019_002970.jpg
+Ego2Top:Case4_Egocentric_1_00000_Egocentric_5_02365.png, Case4_Egocentric_5_00645_TopView_02814.png, Case8_Egocentric_1_01370_TopView_00249.png, Case10_Egocentric_1_00000_Egocentric_1_01683.png
