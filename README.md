@@ -88,11 +88,11 @@ Since there is no semantic maps for the aerial images on this dataset, we use bl
 ```
 bash ./datasets/download_selectiongan_dataset.sh dayton
 ```
-- `dayton_ablation`: 5.7GB
-- `dayton`: 17.0GB
-- `cvusa`: 1.3GB
-- `ego2top`: 104.0GB
-- `sva`: 14.1GB
+- `dayton_ablation`: 5.7 GB
+- `dayton`: 17.0 GB
+- `cvusa`: 1.3 GB
+- `ego2top`: 104.0 GB
+- `sva`: 14.1 GB
 
 **Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image.
 Of course, you can use SelectionGAN for your own datasets and tasks.
