@@ -23,22 +23,22 @@ Download datasets.
 
 ### Pix2pix++ Train/Test
 ```bash
-export CUDA_VISIBLE_DEVICES=0；
+export CUDA_VISIBLE_DEVICES=0;
 DATA_ROOT=./datasets/dayton name=dayton_a2g_pix2pix_plus_64 which_direction=g2a phase=train loadSize=64 fineSize=64 niter=100 th train_pix2pix.lua;
 DATA_ROOT=./datasets/dayton name=dayton_a2g_pix2pix_plus_64 which_direction=g2a phase=test loadSize=64 fineSize=64 which_epoch=100 th test_pix2pix.lua;
 
-export CUDA_VISIBLE_DEVICES=0；
+export CUDA_VISIBLE_DEVICES=0;
 DATA_ROOT=./datasets/dayton name=dayton_g2a_pix2pix_plus_64 which_direction=a2g phase=train loadSize=64 fineSize=64 niter=100 th train_pix2pix.lua;
 DATA_ROOT=./datasets/dayton name=dayton_g2a_pix2pix_plus_64 which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=100 th test_pix2pix.lua;
 ```
 
 ### X-Fork++ Train/Test
 ```bash
-export CUDA_VISIBLE_DEVICES=1；
+export CUDA_VISIBLE_DEVICES=1;
 DATA_ROOT=./datasets/dayton name=dayton_a2g_fork_plus_64 which_direction=g2a phase=train loadSize=64 fineSize=64 niter=100 th train_fork.lua;
 DATA_ROOT=./datasets/dayton name=dayton_a2g_fork_plus_64 which_direction=g2a phase=test loadSize=64 fineSize=64 which_epoch=100 th test_fork.lua;
 
-export CUDA_VISIBLE_DEVICES=1；
+export CUDA_VISIBLE_DEVICES=1;
 DATA_ROOT=./datasets/dayton name=dayton_g2a_fork_plus_64 which_direction=a2g phase=train loadSize=64 fineSize=64 niter=100 th train_fork.lua;
 DATA_ROOT=./datasets/dayton name=dayton_g2a_fork_plus_64 which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=100 th test_fork.lua;
 
@@ -46,11 +46,11 @@ DATA_ROOT=./datasets/dayton name=dayton_g2a_fork_plus_64 which_direction=a2g pha
 
 ### X-Seq++ Train/Test
 ```bash
-export CUDA_VISIBLE_DEVICES=1；
+export CUDA_VISIBLE_DEVICES=1;
 DATA_ROOT=./datasets/dayton name=dayton_a2g_seq_plus_64 which_direction=g2a phase=train loadSize=64 fineSize=64 niter=100 th train_seq.lua;
 DATA_ROOT=./datasets/dayton name=dayton_a2g_seq_plus_64 which_direction=g2a phase=test loadSize=64 fineSize=64 which_epoch=100 th test_seq.lua;
 
-export CUDA_VISIBLE_DEVICES=1；
+export CUDA_VISIBLE_DEVICES=1;
 DATA_ROOT=./datasets/dayton name=dayton_g2a_seq_plus_64 which_direction=a2g phase=train loadSize=64 fineSize=64 niter=100 th train_seq.lua;
 DATA_ROOT=./datasets/dayton name=dayton_g2a_seq_plus_64 which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=100 th test_seq.lua;
 
