@@ -59,12 +59,12 @@ DATA_ROOT=./datasets/dayton name=dayton_g2a_seq_plus_64 which_direction=a2g phas
 ### Pretrained Models
 Pretrained models can be downloaded by using:
 ```
-bash ./scripts/download_plus_model.sh [dataset_name]_[model_name]_plus
+bash ./scripts/download_plus_model.sh dayton_[direction]_[model_name]_plus_64
 ```
-- `[dataset_name]`: cvusa, sva, ego2top, dayton_a2g, dayton_g2a
+- `[direction]`: a2g, g2a
 - `[model_name]`: pix2pix, seq, fork
 
-Then to generate images using (e.g., sva_seq):
+Then to generate images using (e.g., g2a_seq):
 ```
-DATA_ROOT=./datasets/sva name=sva_seq_plus_pretrained which_direction=g2a phase=test which_epoch=latest th test_seq.lua;
+DATA_ROOT=./datasets/dayton name=dayton_g2a_seq_plus_64_pretrained which_direction=a2g phase=test loadSize=64 fineSize=64 which_epoch=latest th test_seq.lua;
 ```
