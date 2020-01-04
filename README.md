@@ -259,9 +259,9 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 ## To Do List
 - [x] SelectionGAN
 - [ ] SelectionGAN++
-- [ ] Pix2pix++
-- [ ] X-ForK++
-- [ ] X-Seq++
+- [ ] Pix2pix++: takes RGB image and target semantic map as inputs
+- [ ] X-ForK++: takes RGB image and target semantic map as inputs
+- [ ] X-Seq++: takes RGB image and target semantic map as inputs
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
