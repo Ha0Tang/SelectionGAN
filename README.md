@@ -84,6 +84,17 @@ Since there is no semantic maps for the aerial images on this dataset, we use bl
 
 **Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from this [paper](https://sites.google.com/view/shervinardeshir). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training. The trianing and testing splits can be downloaded [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/ego2top_split). 
 
+### Download dataset:
+For your convenience we also provide download scripts:
+```
+bash ./datasets/download_selectiongan_dataset.sh dayton
+```
+- `dayton_ablation`: 5.7GB
+- `dayton`: 17.0GB
+- `cvusa`: 1.3GB
+- `ego2top`: 104.0GB
+- `sva`: 14.1GB
+
 **Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image.
 Of course, you can use SelectionGAN for your own datasets and tasks.
 
