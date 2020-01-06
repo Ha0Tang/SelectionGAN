@@ -86,7 +86,7 @@ Since there is no semantic maps for the aerial images on this dataset, we use bl
 
 **Download Dataset**. For your convenience we also provide download scripts:
 ```
-bash ./datasets/download_selectiongan_dataset.sh dayton
+bash ./datasets/download_selectiongan_dataset.sh [dataset_name]
 ```
 - `dayton_ablation`: 5.7 GB
 - `dayton`: 17.0 GB
