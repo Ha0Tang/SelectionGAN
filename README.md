@@ -242,6 +242,7 @@ We use several metrics to evaluate the quality of the generated images.
 - Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 - Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
 - FID: Official Implementation, [FID](https://github.com/bioinf-jku/TTUR), need install `TF 1.1+ and Python 3.x`
+- Perceptual Similarity: [LPIPS](https://github.com/richzhang/PerceptualSimilarity), need install `PyTorch 1.0+` 
 
 Tips for Torch installation, please refer to [here](http://torch.ch/docs/getting-started.html).
 If you run into the installation failure when running `./install.sh`, please refer to [solution](https://github.com/torch/torch7/issues/1086). 
