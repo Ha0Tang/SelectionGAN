@@ -238,9 +238,9 @@ We use several metrics to evaluate the quality of the generated images.
 - Inception Score: [IS](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_topK_KL.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
 - Top-k prediction accuracy: [Acc](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_accuracies.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
 - KL score: [KL](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
-- Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-- Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-- Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
+- Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
 - FID: Official Implementation, [FID](https://github.com/bioinf-jku/TTUR), need install `TF 1.1+ and Python 3.x`
 - Perceptual Similarity: [LPIPS](https://github.com/richzhang/PerceptualSimilarity), need install `PyTorch 1.0+` 
 
