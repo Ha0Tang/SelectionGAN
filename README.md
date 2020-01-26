@@ -222,6 +222,8 @@ python test.py --dataroot [path_to_dataset] \
 
 Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
+We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
+
 ## Code Structure
 
 - `train.py`, `test.py`: the entry point for training and testing.
@@ -246,9 +248,6 @@ We use several metrics to evaluate the quality of the generated images.
 
 Tips for Torch installation, please refer to [here](http://torch.ch/docs/getting-started.html).
 If you run into the installation failure when running `./install.sh`, please refer to [solution](https://github.com/torch/torch7/issues/1086). 
-
-## Others
-We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
 
 ## Citation
 If you use this code for your research, please cite our papers.
