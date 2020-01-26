@@ -277,5 +277,8 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
 - [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
 
+## Others
+- [How to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
+
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
