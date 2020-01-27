@@ -13,7 +13,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-4)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-4?p=multi-channel-attention-selection-gan-with)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-channel-attention-selection-gan-with/cross-view-image-to-image-translation-on-5)](https://paperswithcode.com/sota/cross-view-image-to-image-translation-on-5?p=multi-channel-attention-selection-gan-with)
 
-[SelectionGAN Results](./imgs/supp_dayton_a2g.jpg)
+![SelectionGAN Results](./imgs/supp_dayton_a2g.jpg)
 
 # SelectionGAN for Cross-View Image Translation
 
