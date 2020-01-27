@@ -30,7 +30,7 @@
 
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1904.06807) | [Slides](http://disi.unitn.it/~hao.tang/uploads/slides/SelectionGAN_CVPR19.pptx) | [Video](http://disi.unitn.it/~hao.tang/uploads/videos/SelectionGAN_CVPR19.mp4) | [Poster](http://disi.unitn.it/~hao.tang/uploads/posters/SelectionGAN_CVPR19.pdf)
 
-Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation.<br>
+Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation.<br>
 [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1,2*</sup>,  [Dan Xu](http://www.robots.ox.ac.uk/~danxu/)<sup>3*</sup>, [Nicu Sebe](http://disi.unitn.it/~sebe/)<sup>1,4</sup>, [Yanzhi Wang](https://ywang393.expressions.syr.edu/)<sup>5</sup>, [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/)<sup>6</sup> and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/)<sup>2</sup>. (* Equal Contribution.)<br> 
 <sup>1</sup>University of Trento, Italy, <sup>2</sup>Texas State University, USA, <sup>3</sup>University of Oxford, UK, 
 <sup>4</sup>Huawei Technologies Ireland, Ireland, <sup>5</sup>Northeastern University, USA, <sup>6</sup>University of Michigan, USA   
@@ -224,6 +224,8 @@ python test.py --dataroot [path_to_dataset] \
 
 Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
+We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
+
 ## Code Structure
 
 - `train.py`, `test.py`: the entry point for training and testing.
@@ -240,19 +242,20 @@ We use several metrics to evaluate the quality of the generated images.
 - Inception Score: [IS](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_topK_KL.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
 - Top-k prediction accuracy: [Acc](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_accuracies.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
 - KL score: [KL](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
-- Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-- Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-- Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
+- Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
 - FID: Official Implementation, [FID](https://github.com/bioinf-jku/TTUR), need install `TF 1.1+ and Python 3.x`
+- Perceptual Similarity: [LPIPS](https://github.com/richzhang/PerceptualSimilarity), need install `PyTorch 1.0+` 
 
-We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
+Tips for Torch installation, please refer to [here](http://torch.ch/docs/getting-started.html).
+If you run into the installation failure when running `./install.sh`, please refer to [solution](https://github.com/torch/torch7/issues/1086). 
 
 ## Citation
-
 If you use this code for your research, please cite our papers.
 ```
 @inproceedings{tang2019multichannel,
-  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation},
+  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation},
   author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2019}
@@ -274,6 +277,9 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
 - [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
 - [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
+
+## Others
+- [How to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
