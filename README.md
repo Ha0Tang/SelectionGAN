@@ -31,7 +31,21 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
 - [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 - [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
+
+### Hand Gesture Translation 
 - [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
+
+### Facial Expression Generation
+- [C2GAN (ACM MM 2019, PyTorch)](https://github.com/Ha0Tang/C2GAN)
+- [Few-Shot Adversarial Learning of Realistic Neural Talking Head Models (PyTorch)](https://github.com/grey-eye/talking-heads)
+- [GANimation (ECCV 2018, PyTorch)](https://github.com/albertpumarola/GANimation)
+- [StarGAN (CVPR 2018, PyTorch)](https://github.com/yunjey/stargan)
+
+### Person Image Generation
+- [Pose Transfer (CVPR 2019, PyTorch)](https://github.com/tengteng95/Pose-Transfer)
+- [DPIG (CVPR 2018, Tensorflow)](https://github.com/charliememory/Disentangled-Person-Image-Generation)
+- [PoseGAN (CVPR 2018, Tensorflow)](https://github.com/AliaksandrSiarohin/pose-gan)
+- [G2GAN (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
