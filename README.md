@@ -47,6 +47,9 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [PoseGAN (CVPR 2018, Tensorflow)](https://github.com/AliaksandrSiarohin/pose-gan)
 - [PG2 (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
 
+### Semantic Image Synthesis
+
+
 ## To Do List
 - [x] SelectionGAN: CVPR version
 - [ ] SelectionGAN++: Coming soon!
