@@ -37,7 +37,7 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 
 ### Facial Expression Generation
 - [C2GAN (ACM MM 2019, PyTorch)](https://github.com/Ha0Tang/C2GAN)
-- [Few-Shot Adversarial Learning of Realistic Neural Talking Head Models (PyTorch)](https://github.com/grey-eye/talking-heads)
+- [Talking Heads (PyTorch)](https://github.com/grey-eye/talking-heads)
 - [GANimation (ECCV 2018, PyTorch)](https://github.com/albertpumarola/GANimation)
 - [StarGAN (CVPR 2018, PyTorch)](https://github.com/yunjey/stargan)
 
