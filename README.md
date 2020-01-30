@@ -11,6 +11,41 @@
 # SelectionGAN for Guided Image-to-Image Translation
 
 Coming soon!
+
+## Citation
+If you use this code for your research, please cite our papers.
+```
+@inproceedings{tang2019multichannel,
+  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation},
+  author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2019}
+}
+```
+
+## Acknowledgments
+This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
+
+## Related Projects
+### Cross-View Image Translation 
+- [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
+- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
+- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
+
+## To Do List
+- [x] SelectionGAN: CVPR version
+- [ ] SelectionGAN++: Coming soon!
+- [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
+- [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
+- [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
+
+## Others
+- [How to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
+
+## Contributions
+If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
+
 <!-- ## SelectionGAN Framework
 ![SelectionGAN Framework](./imgs/framework.jpg)
 
@@ -243,35 +278,4 @@ We use several metrics to evaluate the quality of the generated images.
 Tips for Torch installation, please refer to [here](http://torch.ch/docs/getting-started.html).
 If you run into the installation failure when running `./install.sh`, please refer to [solution](https://github.com/torch/torch7/issues/1086). 
 
-## Citation
-If you use this code for your research, please cite our papers.
-```
-@inproceedings{tang2019multichannel,
-  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation},
-  author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2019}
-}
-```
 
-## Acknowledgments
-This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We thank the authors [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis) for providing the evaluation codes. This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
-
-## Related Projects
-- [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
-- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
-- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
-
-## To Do List
-- [x] SelectionGAN: CVPR version
-- [ ] SelectionGAN++:
-- [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
-- [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
-- [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](https://github.com/Ha0Tang/SelectionGAN/tree/master/cross_view_v2)
-
-## Others
-- [How to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
-
-## Contributions
-If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)). -->

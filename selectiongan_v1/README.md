@@ -249,7 +249,10 @@ We use several metrics to evaluate the quality of the generated images.
 Tips for Torch installation, please refer to [here](http://torch.ch/docs/getting-started.html).
 If you run into the installation failure when running `./install.sh`, please refer to [solution](https://github.com/torch/torch7/issues/1086). 
 
-## Citation
+## Acknowledgments
+This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We thank the authors [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis) for providing the evaluation codes. This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
+
+<!-- ## Citation
 If you use this code for your research, please cite our papers.
 ```
 @inproceedings{tang2019multichannel,
@@ -259,9 +262,6 @@ If you use this code for your research, please cite our papers.
   year={2019}
 }
 ```
-
-## Acknowledgments
-This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We thank the authors [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis) for providing the evaluation codes. This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
 
 ## Related Projects
 - [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
@@ -280,4 +280,4 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [How to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
 
 ## Contributions
-If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
+If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)). -->
