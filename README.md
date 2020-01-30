@@ -45,7 +45,7 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 - [Pose Transfer (CVPR 2019, PyTorch)](https://github.com/tengteng95/Pose-Transfer)
 - [DPIG (CVPR 2018, Tensorflow)](https://github.com/charliememory/Disentangled-Person-Image-Generation)
 - [PoseGAN (CVPR 2018, Tensorflow)](https://github.com/AliaksandrSiarohin/pose-gan)
-- [G2GAN (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
+- [PG2 (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
