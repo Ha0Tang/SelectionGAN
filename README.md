@@ -26,7 +26,7 @@ If you use this code for your research, please cite our papers.
 ## Acknowledgments
 This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
 
-## Related Projects
+## [Related Projects](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
 ### Cross-View Image Translation 
 - [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
 - [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
