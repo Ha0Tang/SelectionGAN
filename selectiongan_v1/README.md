@@ -247,7 +247,7 @@ We use several metrics to evaluate the quality of the generated images.
 - Perceptual Similarity: [LPIPS](https://github.com/richzhang/PerceptualSimilarity), need install `PyTorch 1.0+` 
 
 Tips for Torch installation, please refer to [here](http://torch.ch/docs/getting-started.html).
-If you run into the installation failure when running `./install.sh`, please refer to [solution](https://github.com/torch/torch7/issues/1086). 
+If you run into the installation failure when running `./install.sh`, please refer to the [solution](https://github.com/torch/torch7/issues/1086). 
 
 ## Acknowledgments
 This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We thank the authors [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis) for providing the evaluation codes. This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
