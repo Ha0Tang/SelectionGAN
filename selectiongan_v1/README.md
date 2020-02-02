@@ -70,21 +70,21 @@ To reproduce the results reported in the paper, you would need an NVIDIA GeForce
 
 ## Dataset Preparation
 
-For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/samples). Please cite their papers if you use the data. 
+For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](./datasets/samples). Please cite their papers if you use the data. 
 
 **Preparing Ablation Dataset**. We conduct ablation study in a2g (aerialto-ground) direction on Dayton dataset. To reduce the
-training time, we randomly select 1/3 samples from the whole 55,000/21,048 samples i.e. around 18,334 samples for training and 7,017 samples for testing. The trianing and testing splits can be downloaded [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/dayton_ablation_split).
+training time, we randomly select 1/3 samples from the whole 55,000/21,048 samples i.e. around 18,334 samples for training and 7,017 samples for testing. The trianing and testing splits can be downloaded [here](./datasets/dayton_ablation_split).
 
 **Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. 
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
-Train/Test splits for Dayton dataset can be downloaded from [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/dayton_split).
+Train/Test splits for Dayton dataset can be downloaded from [here](./datasets/dayton_split).
 
-**Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [our paper](https://arxiv.org/abs/1904.06807). We also convert semantic maps to the color ones by using this [script](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/convert_semantic_map_cvusa.m).
+**Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [our paper](https://arxiv.org/abs/1904.06807). We also convert semantic maps to the color ones by using this [script](./scripts/convert_semantic_map_cvusa.m).
 Since there is no semantic maps for the aerial images on this dataset, we use black images as aerial semantic maps for placehold purposes.
 
-**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from this [paper](https://sites.google.com/view/shervinardeshir). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training. The trianing and testing splits can be downloaded [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/ego2top_split). 
+**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from this [paper](https://sites.google.com/view/shervinardeshir). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training. The trianing and testing splits can be downloaded [here](./datasets/ego2top_split). 
 
-**Download Dataset**. For your convenience we also provide download scripts:
+**For your convenience we also provide download scripts:**
 ```
 bash ./datasets/download_selectiongan_dataset.sh [dataset_name]
 ```
@@ -222,7 +222,7 @@ python test.py --dataroot [path_to_dataset] \
 
 Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
-We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
+We also provide image IDs used in our paper [here](./scripts/Image_ids.txt) for further qualitative comparsion.
 
 ## Code Structure
 
@@ -237,12 +237,12 @@ We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/Se
 
 We use several metrics to evaluate the quality of the generated images.
 
-- Inception Score: [IS](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_topK_KL.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
-- Top-k prediction accuracy: [Acc](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_accuracies.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
-- KL score: [KL](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
-- Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
-- Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
-- Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Inception Score: [IS](./scripts/evaluation/compute_topK_KL.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
+- Top-k prediction accuracy: [Acc](./scripts/evaluation/compute_accuracies.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
+- KL score: [KL](./scripts/evaluation/KL_model_data.py), need install `Python 2.7, Pytorch 0.4.0, Torchvision 0.2.1`
+- Structural-Similarity: [SSIM](./scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Peak Signal-to-Noise Radio: [PSNR](./scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
+- Sharpness Difference: [SD](./scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Torch`
 - FID: Official Implementation, [FID](https://github.com/bioinf-jku/TTUR), need install `TF 1.1+ and Python 3.x`
 - Perceptual Similarity: [LPIPS](https://github.com/richzhang/PerceptualSimilarity), need install `PyTorch 1.0+` 
 
