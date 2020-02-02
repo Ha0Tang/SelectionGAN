@@ -95,7 +95,7 @@ bash ./datasets/download_selectiongan_dataset.sh [dataset_name]
 - `sva`: 14.1 GB
 
 **Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image.
-Of course, you can use SelectionGAN for your own datasets and tasks.
+Besides, you can use SelectionGAN for your own datasets and tasks.
 
 ## Generating Images Using Pretrained Model
 
