@@ -9,8 +9,9 @@
 ![SelectionGAN Results](./imgs/motivation.jpg)
 
 # SelectionGAN for Guided Image-to-Image Translation
+[Paper](https://arxiv.org/abs/2002.01048)
 
-Coming soon!
+Code coming soon!
 
 ## Citation
 If you use this code for your research, please cite our papers.
