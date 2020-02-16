@@ -86,9 +86,9 @@ Since there is no semantic maps for the aerial images on this dataset, we use bl
 
 **Preparing SVA Dataset**. The dataset can be downloaded [here](http://imagelab.ing.unimore.it/imagelab/page.asp?IdPage=19), which is from this [paper](https://arxiv.org/abs/1706.08442). We further adopt [RefineNet](https://github.com/guosheng/refinenet) to generate the sematic maps for training.
 
-**Preparing NTU and Senz3d Dataset**. Please refer to [GestureGAN](https://github.com/Ha0Tang/GestureGAN).
+**Preparing NTU and Senz3d Dataset**. Please refer to [GestureGAN](https://github.com/Ha0Tang/GestureGAN) for downloading the dataset.
 
-**Preparing Radboud Dataset**. Please refer to [C2GAN](https://github.com/Ha0Tang/C2GAN).
+**Preparing Radboud Dataset**. Please refer to [C2GAN](https://github.com/Ha0Tang/C2GAN) for downloading the dataset.
 
 **For your convenience we also provide download scripts:**
 ```
