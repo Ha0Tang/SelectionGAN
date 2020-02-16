@@ -192,6 +192,9 @@ python train.py --dataroot [path_to_dataset] \
 - For dayton dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 20 --niter_decay 15`.
 - For cvusa dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 15 --niter_decay 15`.
 - For ego2top dataset, [`BS`,`LS`,`FS`]=[8,286,256], append `--niter 5 --niter_decay 5`.
+- For radboud dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 100 --niter_decay 100`.
+- For ntu dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 10 --niter_decay 10`.
+- For senz3d dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 10 --niter_decay 10`.
 
 There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. Training will cost about one week with the default `--batchSize` on one NVIDIA GeForce GTX 1080 Ti GPU. So we suggest you use a larger `--batchSize`, while performance is not tested using a larger `--batchSize`.
 
