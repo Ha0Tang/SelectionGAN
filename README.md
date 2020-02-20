@@ -61,7 +61,7 @@ If you use this code for your research, please cite our papers.
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
-- [x SelectionGAN++: TPAMI submission
+- [x] SelectionGAN++: TPAMI submission
 - [x] Pix2pix++: Takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
 - [x] X-ForK++: Takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
 - [x] X-Seq++: Takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
