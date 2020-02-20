@@ -16,6 +16,13 @@ Code coming soon!
 ## Citation
 If you use this code for your research, please cite our papers.
 ```
+@article{tang2020multi,
+  title={Multi-Channel Attention Selection GANs for Guided Image-to-Image Translation},
+  author={Tang, Hao and Xu, Dan and Yan, Yan and Corso, Jason J and Torr, Philip HS and Sebe, Nicu},
+  journal={arXiv preprint arXiv:2002.01048},
+  year={2020}
+}
+
 @inproceedings{tang2019multichannel,
   title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation},
   author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
