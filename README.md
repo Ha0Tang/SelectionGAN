@@ -54,7 +54,10 @@ If you use this code for your research, please cite our papers.
 - [PG2 (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
 
 ### Semantic Image Synthesis
-
+- [GauGAN (CVPR 2019, PyTorch)](https://github.com/NVlabs/SPADE)
+- [Pix2pixHD (CVPR 2018, PyTorch)](https://github.com/NVIDIA/pix2pixHD)
+- [SIMS (CVPR 2018, Tensorflow)](https://github.com/xjqicuhk/SIMS)
+- [CRN (ICCV 2017, Tensorflow)](https://github.com/johnathanlouie/crn)
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
