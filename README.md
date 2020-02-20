@@ -61,7 +61,7 @@ This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytor
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
-- [ ] SelectionGAN++: Coming soon!
+- [x SelectionGAN++: TPAMI submission
 - [x] Pix2pix++: takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
 - [x] X-ForK++: takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
 - [x] X-Seq++: takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
