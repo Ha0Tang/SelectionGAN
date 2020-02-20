@@ -1,0 +1,13 @@
+python test.py --dataroot ./datasets/sva \
+	--name sva_selectiongan_plus \
+	--model selectiongan \
+	--which_model_netG unet_256 \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm batch \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 256 \
+	--fineSize 256 \
+	--no_flip \
+	--eval --how_many 1000000000 --saveDisk
