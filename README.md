@@ -9,7 +9,7 @@
 ![SelectionGAN Results](./imgs/motivation.jpg)
 
 # SelectionGAN for Guided Image-to-Image Translation
-### [Paper](https://arxiv.org/abs/2002.01048) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
+### [CVPR Paper](https://arxiv.org/abs/1904.06807) | [Extended Paper](https://arxiv.org/abs/2002.01048) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
 
 Code coming soon!
 
