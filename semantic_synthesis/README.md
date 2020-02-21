@@ -4,8 +4,9 @@
 
 Clone this repo.
 ```bash
-git clone https://github.com/NVlabs/SPADE.git
-cd SPADE/
+git clone https://github.com/Ha0Tang/SelectionGAN
+cd SelectionGAN/
+cd semantic_synthesis/
 ```
 
 This code requires PyTorch 1.0 and python 3+. Please install dependencies by
@@ -24,7 +25,7 @@ cd ../../
 To reproduce the results reported in the paper, you would need an NVIDIA DGX1 machine with 8 V100 GPUs.
 
 ## Dataset Preparation
-
+Follow [GauGAN](https://github.com/NVlabs/SPADE) for more details.
 
 ## Generating Images Using Pretrained Model
 
