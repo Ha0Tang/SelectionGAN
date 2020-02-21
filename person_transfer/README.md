@@ -4,13 +4,8 @@ Code for person image generation. This is Pytorch implementation for pose transf
 ## Requirement
 * pytorch 1.0.1
 * torchvision
-* numpy
-* scipy
-* scikit-image
-* pillow
-* pandas
-* tqdm
 * dominate
+* Others
 
 ## Getting Started
 ### Installation
