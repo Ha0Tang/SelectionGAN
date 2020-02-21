@@ -17,17 +17,16 @@ git clone
 
 ### Data Preperation
 
-We use [OpenPose](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation) to generate keypoints. We also provide our extracted keypoints files for convience.
+We use [OpenPose](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation) to generate keypoints. We also provide the images for convience.
 
 #### Market1501
 ```bash
-python tool/generate_pose_map_market.py
+python
 ```
-
 
 #### DeepFashion
 ```bash
-python tool/generate_pose_map_fashion.py
+python
 ```
 
 ### Train a model
