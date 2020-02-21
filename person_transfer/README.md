@@ -19,7 +19,7 @@ cd person_transfer
 
 ### Data Preperation
 
-We use [OpenPose](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation) to generate keypoints. We also provide the images for convience.
+We use [OpenPose](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation) to generate keypoints. We also provide the prepared images for convience.
 
 #### Market1501
 ```bash
@@ -59,5 +59,3 @@ sh scripts/download_selectiongan_model.sh market
 
 ### Evaluation
 We adopt SSIM, mask-SSIM, IS, mask-IS, and PCKh for evaluation of Market-1501. SSIM, IS, DS, PCKh for DeepFashion.
-
-### Pre-trained model 
