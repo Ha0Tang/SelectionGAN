@@ -44,7 +44,7 @@ sh run.sh
 Testing is similar to testing pretrained models.
 
 ```bash
-python test.py --name [name_of_experiment] --dataset_mode [dataset_mode] --dataroot [path_to_dataset]
+python test.py --name ade_selectiongan --dataset_mode ade20k --dataroot ./datasets/ADEChallengeData2016 --gpu_ids 0 --results_dir ./results --checkpoints_dir ./checkpoints --batchSize 1 --which_epoch latest;
 ```
 
 Use `--results_dir` to specify the output directory. `--how_many` will specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
