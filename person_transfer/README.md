@@ -12,7 +12,9 @@ Code for person image generation. This is Pytorch implementation for pose transf
 
 - Clone this repo:
 ```bash
-git clone 
+git clone https://github.com/Ha0Tang/SelectionGAN
+cd SelectionGAN
+cd person_transfer
 ```
 
 ### Data Preperation
@@ -21,12 +23,12 @@ We use [OpenPose](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation)
 
 #### Market1501
 ```bash
-python
+sh datasets/download_selectiongan_dataset.sh market_data
 ```
 
 #### DeepFashion
 ```bash
-python
+sh datasets/download_selectiongan_dataset.sh fashion_data
 ```
 
 ### Training
