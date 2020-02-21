@@ -45,6 +45,7 @@ Testing is similar to testing pretrained models.
 ```bash
 sh test.sh
 ```
+Use `--results_dir` to specify the output directory. `--how_many` will specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
 ### Pretrained Models
 ```bash
@@ -52,4 +53,3 @@ sh scripts/download_selectiongan_model.sh cityscapes
 sh scripts/download_selectiongan_model.sh ade20k
 ```
 
-Use `--results_dir` to specify the output directory. `--how_many` will specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
