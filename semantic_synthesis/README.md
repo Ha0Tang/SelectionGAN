@@ -1,5 +1,3 @@
-# Semantic Image Synthesis with SelectionGAN
-
 ## Installation
 
 Clone this repo.
