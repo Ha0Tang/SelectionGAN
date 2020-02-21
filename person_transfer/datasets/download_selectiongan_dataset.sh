@@ -1,7 +1,7 @@
 FILE=$1
 
-if [[ $FILE != "market_data" && $FILE != "fashion_data"]]; 
-	then echo "Available datasets are market_data, fashion_data"
+if [[ $FILE != "dayton_ablation" && $FILE != "dayton" && $FILE != "cvusa" && $FILE != "ego2top" && $FILE != "sva" && $FILE != "market_data" && $FILE != "fashion_data" ]]; 
+	then echo "Available datasets are dayton_ablation, dayton, cvusa, ego2top, sva, market_data, fashion_data"
 	exit 1
 fi
 
