@@ -6,12 +6,10 @@
 ![Contributing](https://img.shields.io/badge/contributions-welcome-red.svg?style=flat)
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
-![SelectionGAN Results](./imgs/motivation.jpg)
-
 # SelectionGAN for Guided Image-to-Image Translation
 ### [CVPR Paper](https://arxiv.org/abs/1904.06807) | [Extended Paper](https://arxiv.org/abs/2002.01048) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
 
-Code coming soon!
+![SelectionGAN Results](./imgs/motivation.jpg)
 
 ## Citation
 If you use this code for your research, please cite our papers.
