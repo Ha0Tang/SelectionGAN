@@ -191,8 +191,8 @@ class TransferModel(BaseModel):
 
         # ssimloss = -self.criterionSSIM(self.input_P2, self.fake_p2) * 10
         # ssimloss = - (self.criterionSSIM(self.input_P2, self.fake_p2) * 20 + self.criterionSSIM(self.input_P2, self.fake_p2_1) * 10)
-        # ssimloss = - (self.criterionSSIM(self.input_P2, self.fake_p2) * 2 + self.criterionSSIM(self.input_P2, self.fake_p2_1) * 1)
-        ssimloss = -self.criterionSSIM(self.input_P2, self.fake_p2) * 20
+        # ssimloss = - (self.criterionSSIM(self.input_P2, self.fake_p2) * 2 + self.criterionSSIM(self.input_P2, self.fake_p2_1) * 1) # market
+        ssimloss = -self.criterionSSIM(self.input_P2, self.fake_p2) * 20 # fashion
 
         if self.opt.with_D_PB or self.opt.with_D_PP:
             pair_loss = pair_L1loss + pair_GANloss + tvloss + ssimloss
