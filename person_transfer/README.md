@@ -29,7 +29,7 @@ python
 python
 ```
 
-### Train a model
+### Training
 Market-1501
 ```bash
 sh train_market.sh
@@ -40,15 +40,19 @@ DeepFashion
 sh train_fashion.sh
 ```
 
-### Test the model
+### Testing
 Market1501
 ```bash
 sh test_market.sh
 ```
-
 DeepFashion
 ```bash
 sh test_fashion.sh
+```
+
+### Pretrained Models
+```bash
+sh scripts/download_selectiongan_model.sh market
 ```
 
 ### Evaluation
