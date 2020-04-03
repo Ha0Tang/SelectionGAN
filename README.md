@@ -52,7 +52,6 @@ If you use this code for your research, please cite our papers.
 - [PG2 (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
 
 ### Semantic Image Synthesis
-## Related Projects
 - [EdgeGAN (Arxiv 2020, PyTorch)](https://github.com/Ha0Tang/EdgeGAN)
 - [LGGAN (CVPR 2020, PyTorch)](https://github.com/Ha0Tang/LGGAN)
 - [GauGAN (CVPR 2019, PyTorch)](https://github.com/NVlabs/SPADE)
