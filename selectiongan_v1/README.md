@@ -134,7 +134,7 @@ python test.py --dataroot [path_to_dataset] \
 
 - `dayton_a2g_64_pretrained`: [16,72,64]
 - `dayton_g2a_64_pretrained`: [16,72,64]
-- `dayton_g2a_256_pretrained`: [4,286,256]
+- `dayton_a2g_256_pretrained`: [4,286,256]
 - `dayton_g2a_256_pretrained`: [4,286,256]
 - `cvusa_pretrained`: [4,286,256]
 - `ego2top_pretrained`: [8,286,256]
