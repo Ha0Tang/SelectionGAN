@@ -1,7 +1,7 @@
 clear all;close all;clc
 
-image_folder='/home/htang/projects/SelectionGAN/selectiongan_v1/datasets/dayton/test';
-save_folder='/home/htang/projects/SelectionGAN/selectiongan_v1/datasets/dayton_g2a/test';
+image_folder='./datasets/dayton/test';
+save_folder='./datasets/dayton_g2a/test';
 
 if ~isdir(save_folder)
     mkdir(save_folder)
