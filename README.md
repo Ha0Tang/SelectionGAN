@@ -24,8 +24,22 @@ If you use this code for your research, please cite our papers.
 @inproceedings{tang2019multichannel,
   title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation},
   author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={CVPR},
   year={2019}
+}
+
+@article{tang2020edge,
+  title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
+  author={Tang, Hao and Qi, Xiaojuan and Xu, Dan and Torr, Philip HS and Sebe, Nicu},
+  journal={arXiv preprint arXiv:2003.13898},
+  year={2020}
+}
+
+@inproceedings{tang2019local,
+  title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
+  author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
+  booktitle={CVPR},
+  year={2020}
 }
 ```
 
@@ -52,6 +66,8 @@ If you use this code for your research, please cite our papers.
 - [PG2 (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
 
 ### Semantic Image Synthesis
+- [EdgeGAN (Arxiv 2020, PyTorch)](https://github.com/Ha0Tang/EdgeGAN)
+- [LGGAN (CVPR 2020, PyTorch)](https://github.com/Ha0Tang/LGGAN)
 - [GauGAN (CVPR 2019, PyTorch)](https://github.com/NVlabs/SPADE)
 - [Pix2pixHD (CVPR 2018, PyTorch)](https://github.com/NVIDIA/pix2pixHD)
 - [SIMS (CVPR 2018, Tensorflow)](https://github.com/xjqicuhk/SIMS)

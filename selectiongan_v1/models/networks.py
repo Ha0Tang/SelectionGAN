@@ -296,7 +296,8 @@ class UnetGenerator_a(nn.Module):
         pool_feature1 = self.pool1(feature_image_combine)
         pool_feature2 = self.pool2(feature_image_combine)
         pool_feature3 = self.pool3(feature_image_combine)
-
+        
+        # change all (256, 256) to (64, 64) if your image size is 64*64
         pool_feature1_up = F.upsample(input=pool_feature1, size=(256, 256), mode='bilinear', align_corners=True)
         pool_feature2_up = F.upsample(input=pool_feature2, size=(256, 256), mode='bilinear', align_corners=True)
         pool_feature3_up = F.upsample(input=pool_feature3, size=(256, 256), mode='bilinear', align_corners=True)

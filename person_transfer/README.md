@@ -58,4 +58,4 @@ sh scripts/download_selectiongan_model.sh market
 ```
 
 ### Evaluation
-We adopt SSIM, mask-SSIM, IS, mask-IS, and PCKh for evaluation of Market-1501. SSIM, IS, DS, PCKh for DeepFashion.
+Follow [Pose-Transfer](https://github.com/tengteng95/Pose-Transfer) for more details.
