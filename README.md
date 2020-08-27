@@ -45,6 +45,7 @@ If you use this code for your research, please cite our papers.
 
 ## [Related Projects](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
 ### Cross-View Image Translation 
+- [PanoGAN (2020, PyTorch)](https://github.com/sswuai/PanoGAN)
 - [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
 - [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 - [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
