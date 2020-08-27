@@ -68,6 +68,7 @@ If you use this code for your research, please cite our papers.
 
 ### Semantic Image Synthesis
 - [EdgeGAN (Arxiv 2020, PyTorch)](https://github.com/Ha0Tang/EdgeGAN)
+- [DAGAN (ACM MM 2020, PyTorch)](https://github.com/Ha0Tang/DAGAN)
 - [LGGAN (CVPR 2020, PyTorch)](https://github.com/Ha0Tang/LGGAN)
 - [GauGAN (CVPR 2019, PyTorch)](https://github.com/NVlabs/SPADE)
 - [Pix2pixHD (CVPR 2018, PyTorch)](https://github.com/NVIDIA/pix2pixHD)
