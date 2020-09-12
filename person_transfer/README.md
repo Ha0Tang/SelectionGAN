@@ -53,8 +53,14 @@ sh test_fashion.sh
 ```
 
 ### Pretrained Models
+Market1501
 ```bash
 sh scripts/download_selectiongan_model.sh market
+```
+
+DeepFashion
+```bash
+sh scripts/download_selectiongan_model.sh fashion
 ```
 
 ### Evaluation

@@ -1,6 +1,6 @@
 FILE=$1
 
-echo "Note: available models are market"
+echo "Note: available models are market, fashion"
 echo "Specified [$FILE]"
 
 URL=http://disi.unitn.it/~hao.tang/uploads/models/SelectionGAN/${FILE}_pretrained.tar.gz
