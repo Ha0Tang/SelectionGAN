@@ -1,6 +1,6 @@
 clear all;close all;clc
 
-txt_path='./you_file.txt';
+txt_path='./exp_file.txt';
 
 data=importdata(txt_path);
 number_image=size(data.data,1)
