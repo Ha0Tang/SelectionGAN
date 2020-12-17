@@ -43,37 +43,9 @@ If you use this code for your research, please cite our papers.
 }
 ```
 
-## [Related Projects](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
-### Cross-View Image Translation 
-- [PanoGAN (2020, PyTorch)](https://github.com/sswuai/PanoGAN)
-- [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
-- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
+In the meantime, check out our related cross-view image translation paper [Cross-View Panorama Image Synthesis](https://github.com/sswuai/PanoGAN), our related person image generation pepers [XingGAN for Person Image Generation (ECCV 2020)](https://github.com/Ha0Tang/XingGAN) and [Bipartite Graph Reasoning GANs for Person Image Generation (BMVC 2020 Oral)](https://github.com/Ha0Tang/BiGraphGAN), and our related semantic image synthesis pepers [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN), [Dual Attention GANs for Semantic Image Synthesis (ACM MM 2020)](https://github.com/Ha0Tang/DAGAN), and [Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation (CVPR 2020)](https://github.com/Ha0Tang/LGGAN).
 
-### Hand Gesture Translation 
-- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
-
-### Facial Expression Generation
-- [C2GAN (ACM MM 2019, PyTorch)](https://github.com/Ha0Tang/C2GAN)
-- [Talking Heads (ICCV 2019, PyTorch)](https://github.com/grey-eye/talking-heads)
-- [GANimation (ECCV 2018, PyTorch)](https://github.com/albertpumarola/GANimation)
-- [StarGAN (CVPR 2018, PyTorch)](https://github.com/yunjey/stargan)
-
-### Person Image Generation
-- [Pose Transfer (CVPR 2019, PyTorch)](https://github.com/tengteng95/Pose-Transfer)
-- [DPIG (CVPR 2018, Tensorflow)](https://github.com/charliememory/Disentangled-Person-Image-Generation)
-- [VUnet (CVPR 2018, Tensorflow)](https://github.com/CompVis/vunet)
-- [PoseGAN (CVPR 2018, Tensorflow)](https://github.com/AliaksandrSiarohin/pose-gan)
-- [PG2 (NIPS 2017, Tensorflow)](https://github.com/charliememory/Pose-Guided-Person-Image-Generation)
-
-### Semantic Image Synthesis
-- [EdgeGAN (Arxiv 2020, PyTorch)](https://github.com/Ha0Tang/EdgeGAN)
-- [DAGAN (ACM MM 2020, PyTorch)](https://github.com/Ha0Tang/DAGAN)
-- [LGGAN (CVPR 2020, PyTorch)](https://github.com/Ha0Tang/LGGAN)
-- [GauGAN (CVPR 2019, PyTorch)](https://github.com/NVlabs/SPADE)
-- [Pix2pixHD (CVPR 2018, PyTorch)](https://github.com/NVIDIA/pix2pixHD)
-- [SIMS (CVPR 2018, Tensorflow)](https://github.com/xjqicuhk/SIMS)
-- [CRN (ICCV 2017, Tensorflow)](https://github.com/johnathanlouie/crn)
+More related guided image-to-image translation papers can be found in [this page](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers).
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
