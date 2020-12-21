@@ -45,14 +45,14 @@ If you use this code for your research, please cite our papers.
 
 In the meantime, check out our related papers:
 - cross-view image translation: 
-  - [Cross-View Panorama Image Synthesis](https://github.com/sswuai/PanoGAN), 
+  - [Cross-View Panorama Image Synthesis](https://github.com/sswuai/PanoGAN)
 - person image generation: 
   - [XingGAN for Person Image Generation (ECCV 2020)](https://github.com/Ha0Tang/XingGAN)
   - [Bipartite Graph Reasoning GANs for Person Image Generation (BMVC 2020 Oral)](https://github.com/Ha0Tang/BiGraphGAN)
 - semantic image synthesis: 
   - [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN)
   - [Dual Attention GANs for Semantic Image Synthesis (ACM MM 2020)](https://github.com/Ha0Tang/DAGAN)
-  - [Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation (CVPR 2020)](https://github.com/Ha0Tang/LGGAN).
+  - [Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation (CVPR 2020)](https://github.com/Ha0Tang/LGGAN)
 
 More related guided image-to-image translation papers can be found in [this page](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers).
 
