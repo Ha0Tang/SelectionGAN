@@ -58,7 +58,7 @@ More related guided image-to-image translation papers can be found in [this page
 - [How to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
 
 ## Acknowledgments
-This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
+This source code is inspired by [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
