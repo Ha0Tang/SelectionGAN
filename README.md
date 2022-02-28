@@ -35,6 +35,13 @@ If you use this code for your research, please cite our papers.
   year={2020}
 }
 
+@article{tang2022local,
+  title={Local and Global GANs with Semantic-Aware Upsampling for Image Generation},
+  author={Tang, Hao and Shao, Ling and Torr, Philip HS and Sebe, Nicu},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year={2022}
+}
+
 @inproceedings{tang2019local,
   title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
   author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
