@@ -52,7 +52,8 @@ If you use this code for your research, please cite our papers.
 
 In the meantime, check out our related papers:
 - cross-view image translation: 
-  - [Cross-View Panorama Image Synthesis](https://github.com/sswuai/PanoGAN)
+  - [Cross-View Panorama Image Synthesis (TMM 2022)](https://github.com/sswuai/PanoGAN)
+  - [Cascaded Cross MLP-Mixer GANs for Cross-View Image Translation (BMVC 2021 Oral)](https://github.com/Amazingren/CrossMLP)
 - person image generation: 
   - [XingGAN for Person Image Generation (ECCV 2020)](https://github.com/Ha0Tang/XingGAN)
   - [Bipartite Graph Reasoning GANs for Person Image Generation (BMVC 2020 Oral)](https://github.com/Ha0Tang/BiGraphGAN)
