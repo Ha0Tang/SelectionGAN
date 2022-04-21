@@ -48,6 +48,20 @@ If you use this code for your research, please cite our papers.
   booktitle={CVPR},
   year={2020}
 }
+
+@article{wu2022cross,
+  title={Cross-View Panorama Image Synthesis},
+  author={Wu, Songsong and Tang, Hao and Jing, Xiao-Yuan and Zhao, Haifeng and Qian, Jianjun and Sebe, Nicu and Yan, Yan},
+  journal={IEEE Transactions on Multimedia (TMM)},
+  year={2022}
+}
+
+@inproceedings{ren2021cascaded,
+  title={Cascaded Cross MLP-Mixer GANs for Cross-View Image Translation},
+  author={Ren, Bin and Tang, Hao and Sebe, Nicu},
+  booktitle={BMVC},
+  year={2021}
+}
 ```
 
 In the meantime, check out our related papers:
