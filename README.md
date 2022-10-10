@@ -81,7 +81,7 @@ More related guided image-to-image translation papers can be found in [this page
 
 ## To Do List
 - [x] SelectionGAN: CVPR version
-- [x] SelectionGAN++: TPAMI submission
+- [x] SelectionGAN++: TPAMI version
 - [x] Pix2pix++: Takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
 - [x] X-ForK++: Takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
 - [x] X-Seq++: Takes RGB image and target semantic map as inputs: [code](./cross_view_v2)
