@@ -53,7 +53,7 @@ If you use this code for your research, please cite our papers.
 @article{wu2022cross,
   title={Cross-view panorama image synthesis with progressive attention GANs},
   author={Wu, Songsong and Tang, Hao and Jing, Xiao-Yuan and Qian, Jianjun and Sebe, Nicu and Yan, Yan and Zhang, Qinghua},
-  journal={Elsevier PR},
+  journal={Elsevier Pattern Recognition (PR)},
   year={2022}
 }
 
