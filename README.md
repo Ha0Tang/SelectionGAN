@@ -51,6 +51,13 @@ If you use this code for your research, please cite our papers.
 }
 
 @article{wu2022cross,
+  title={Cross-view panorama image synthesis with progressive attention GANs},
+  author={Wu, Songsong and Tang, Hao and Jing, Xiao-Yuan and Qian, Jianjun and Sebe, Nicu and Yan, Yan and Zhang, Qinghua},
+  journal={Elsevier PR},
+  year={2022}
+}
+
+@article{wu2022cross,
   title={Cross-View Panorama Image Synthesis},
   author={Wu, Songsong and Tang, Hao and Jing, Xiao-Yuan and Zhao, Haifeng and Qian, Jianjun and Sebe, Nicu and Yan, Yan},
   journal={IEEE Transactions on Multimedia (TMM)},
