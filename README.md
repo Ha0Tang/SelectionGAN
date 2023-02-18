@@ -29,11 +29,11 @@ If you use this code for your research, please cite our papers.
   year={2019}
 }
 
-@article{tang2020edge,
-  title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
-  author={Tang, Hao and Qi, Xiaojuan and Xu, Dan and Torr, Philip HS and Sebe, Nicu},
-  journal={arXiv preprint arXiv:2003.13898},
-  year={2020}
+@article{tang2023edge,
+  title={Edge Guided GANs with Contrastive Learning for Semantic Image Synthesis},
+  author={Tang, Hao and Qi, Xiaojuan and Sun, Guolei, and Xu, Dan and and Sebe, Nicu and Timofte, Radu and Van Gool, Luc},
+  journal={ICLR},
+  year={2023}
 }
 
 @article{tang2022local,
