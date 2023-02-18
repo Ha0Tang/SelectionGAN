@@ -15,7 +15,7 @@
 ## Citation
 If you use this code for your research, please cite our papers.
 ```
-@article{tang2020multi,
+@article{tang2022multi,
   title={Multi-Channel Attention Selection GANs for Guided Image-to-Image Translation},
   author={Tang, Hao and Torr, Philip HS and Sebe, Nicu},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
