@@ -80,7 +80,7 @@ In the meantime, check out our related papers:
   - [XingGAN for Person Image Generation (ECCV 2020)](https://github.com/Ha0Tang/XingGAN)
   - [Bipartite Graph Reasoning GANs for Person Image Generation (BMVC 2020 Oral)](https://github.com/Ha0Tang/BiGraphGAN)
 - semantic image synthesis: 
-  - [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN)
+  - [Edge Guided GANs with Contrastive Learning for Semantic Image Synthesis (ICLR 2023)](https://github.com/Ha0Tang/ECGAN)
   - [Dual Attention GANs for Semantic Image Synthesis (ACM MM 2020)](https://github.com/Ha0Tang/DAGAN)
   - [Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation (CVPR 2020)](https://github.com/Ha0Tang/LGGAN)
 
