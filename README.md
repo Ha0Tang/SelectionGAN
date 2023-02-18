@@ -8,7 +8,7 @@
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 # SelectionGAN for Guided Image-to-Image Translation
-### [CVPR Paper](https://arxiv.org/abs/1904.06807) | [Extended Paper](https://arxiv.org/abs/2002.01048) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
+### [CVPR Paper](https://arxiv.org/abs/1904.06807) | [TPAMI Paper](https://arxiv.org/abs/2002.01048) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)
 
 ![SelectionGAN Results](./imgs/motivation.jpg)
 
