@@ -22,7 +22,7 @@ If you use this code for your research, please cite our papers.
   year={2022}
 }
 
-@inproceedings{tang2019multichannel,
+@inproceedings{tang2019multi,
   title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation},
   author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
   booktitle={CVPR},
@@ -43,7 +43,7 @@ If you use this code for your research, please cite our papers.
   year={2022}
 }
 
-@inproceedings{tang2019local,
+@inproceedings{tang2020local,
   title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
   author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
   booktitle={CVPR},
